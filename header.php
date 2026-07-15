@@ -20,6 +20,7 @@
       <div class="header__nav-item header__nav-item--has-sub">
         <a href="<?php echo esc_url(tokai_page_url('news')); ?>" class="header__nav-link">News</a>
         <div class="header__submenu">
+          <a href="<?php echo esc_url(tokai_page_url('news', ['cat' => 'match'])); ?>">試合結果</a>
           <a href="<?php echo esc_url(tokai_page_url('news', ['cat' => 'oshirase'])); ?>">お知らせ</a>
           <a href="<?php echo esc_url(tokai_page_url('news', ['cat' => 'top'])); ?>">TOP</a>
           <a href="<?php echo esc_url(tokai_page_url('news', ['cat' => '2nd'])); ?>">2nd</a>

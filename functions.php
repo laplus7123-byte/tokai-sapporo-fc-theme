@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('TOKAI_THEME_VERSION', '1.0.1');
+define('TOKAI_THEME_VERSION', '1.0.2');
 
 require_once get_template_directory() . '/inc/helpers.php';
 require_once get_template_directory() . '/inc/tokai-news-fields.php';
@@ -68,15 +68,13 @@ function tokai_enqueue_assets() {
             'postUrlBase'  => esc_url_raw(home_url('/')),
             'tabCategories' => [
                 ['filter' => 'all', 'label' => 'ALL'],
+                ['filter' => 'match', 'label' => '試合結果', 'slug' => 'match'],
                 ['filter' => 'oshirase', 'label' => 'お知らせ', 'slug' => 'oshirase'],
                 ['filter' => 'top', 'label' => 'TOP', 'slug' => 'top'],
                 ['filter' => '2nd', 'label' => '2nd', 'slug' => '2nd'],
                 ['filter' => '3rd', 'label' => '3rd', 'slug' => '3rd'],
                 ['filter' => '4th', 'label' => '4th', 'slug' => '4th'],
             ],
-            'defaultBadge' => tokai_asset('news2.gif'),
-            'badgeMatch'   => tokai_asset('news2.gif'),
-            'badgeNotice'  => tokai_asset('news2.gif'),
         ]);
     }
 

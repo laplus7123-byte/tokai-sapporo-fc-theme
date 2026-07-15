@@ -33,13 +33,18 @@
         <span class="section__title-ja">ニュース</span>
       </h2>
     </div>
-    <div class="news-tabs" role="tablist" aria-label="ニュースカテゴリー">
-      <button type="button" class="news-tabs__btn is-active" role="tab" aria-selected="true" data-filter="all">ALL</button>
-      <button type="button" class="news-tabs__btn" role="tab" aria-selected="false" data-filter="oshirase">お知らせ</button>
-      <button type="button" class="news-tabs__btn" role="tab" aria-selected="false" data-filter="top">TOP</button>
-      <button type="button" class="news-tabs__btn" role="tab" aria-selected="false" data-filter="2nd">2nd</button>
-      <button type="button" class="news-tabs__btn" role="tab" aria-selected="false" data-filter="3rd">3rd</button>
-      <button type="button" class="news-tabs__btn" role="tab" aria-selected="false" data-filter="4th">4th</button>
+    <div class="news-filters">
+      <div class="news-tabs news-tabs--category" role="tablist" aria-label="ニュースカテゴリー">
+        <button type="button" class="news-tabs__btn is-active" role="tab" aria-selected="true" data-filter="all">ALL</button>
+        <button type="button" class="news-tabs__btn" role="tab" aria-selected="false" data-filter="match">試合結果</button>
+        <button type="button" class="news-tabs__btn" role="tab" aria-selected="false" data-filter="oshirase">お知らせ</button>
+      </div>
+      <div class="news-tabs news-tabs--team" role="tablist" aria-label="チーム">
+        <button type="button" class="news-tabs__btn" role="tab" aria-selected="false" data-filter="top">TOP</button>
+        <button type="button" class="news-tabs__btn" role="tab" aria-selected="false" data-filter="2nd">2nd</button>
+        <button type="button" class="news-tabs__btn" role="tab" aria-selected="false" data-filter="3rd">3rd</button>
+        <button type="button" class="news-tabs__btn" role="tab" aria-selected="false" data-filter="4th">4th</button>
+      </div>
     </div>
     <div class="news-list" data-news-list data-limit="6" data-heading="h3"></div>
     <div class="section__more-wrap"><a href="<?php echo esc_url(tokai_page_url('news')); ?>" class="section__more">More</a></div>

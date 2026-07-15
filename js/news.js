@@ -85,18 +85,49 @@
     return post.meta?.[key] ?? post.acf?.[key] ?? '';
   }
 
-  function getCategorySlug(post) {
+  const TEAM_SLUGS = ['top', '2nd', '3rd', '4th'];
+
+  function getCategoryObjects(post) {
     const cats = post.categories || [];
-    if (Array.isArray(cats) && cats.length > 0) {
-      if (typeof cats[0] === 'object' && cats[0].slug) {
-        const tabSlugs = (config.tabCategories || [])
-          .map((t) => t.slug)
-          .filter(Boolean);
-        const match = cats.find((c) => tabSlugs.includes(c.slug));
-        return match?.slug || cats[0].slug;
-      }
-    }
-    return 'oshirase';
+    if (!Array.isArray(cats) || !cats.length) return [];
+    if (typeof cats[0] === 'object' && cats[0].slug) return cats;
+    return [];
+  }
+
+  function getTeamSlug(post) {
+    const cats = getCategoryObjects(post);
+    const team = cats.find((c) => TEAM_SLUGS.includes(c.slug));
+    return team?.slug || '';
+  }
+
+  function getCategorySlug(post) {
+    const team = getTeamSlug(post);
+    if (team) return team;
+
+    const cats = getCategoryObjects(post);
+    if (cats.some((c) => c.slug === 'oshirase')) return 'oshirase';
+    if (cats.some((c) => c.slug === 'match-result')) return 'match';
+    return cats[0]?.slug || 'oshirase';
+  }
+
+  function getNewsType(post) {
+    const badge = getMeta(post, 'news_badge');
+    if (badge === 'match') return 'match';
+    if (badge === 'notice') return 'notice';
+
+    const slug = getCategorySlug(post);
+    if (slug === 'oshirase') return 'notice';
+    if (TEAM_SLUGS.includes(slug) || slug === 'match') return 'match';
+    return 'notice';
+  }
+
+  function getTypeLabel(type) {
+    return type === 'match' ? '試合結果' : 'お知らせ';
+  }
+
+  function getTeamLabel(slug) {
+    const labels = { top: 'TOP', '2nd': '2nd', '3rd': '3rd', '4th': '4th' };
+    return labels[slug] || '';
   }
 
   function getFeaturedImage(post) {
@@ -113,20 +144,22 @@
     return `${y}.${m}.${day}`;
   }
 
-  function getBadgeSrc(post) {
-    const badge = getMeta(post, 'news_badge');
-    if (badge === 'match') return config.badgeMatch || config.defaultBadge;
-    if (badge === 'notice') return config.badgeNotice || config.defaultBadge;
-    const slug = getCategorySlug(post);
-    return slug === 'oshirase'
-      ? (config.badgeNotice || config.defaultBadge)
-      : (config.badgeMatch || config.defaultBadge);
-  }
+  function renderBadge(post) {
+    const type = getNewsType(post);
+    const typeLabel = getTypeLabel(type);
+    const teamSlug = getTeamSlug(post);
+    const teamLabel = getTeamLabel(teamSlug);
 
-  function getBadgeAlt(post) {
-    const badge = getMeta(post, 'news_badge');
-    if (badge === 'notice' || getCategorySlug(post) === 'oshirase') return 'お知らせ';
-    return '試合結果';
+    const teamHtml = teamLabel
+      ? `<span class="news-item__badge-tag">${escapeHtml(teamLabel)}</span>`
+      : '';
+
+    return `
+      <div class="news-item__badge">
+        <span class="news-item__badge-cat news-item__badge-cat--${escapeHtml(type)}">${escapeHtml(typeLabel)}</span>
+        ${teamHtml}
+      </div>
+    `;
   }
 
   function parseMembers(raw) {
@@ -233,8 +266,8 @@
     const tag = headingTag || 'h3';
     const title = stripHtml(post.title?.rendered || '');
     const category = getCategorySlug(post);
-    const badge = getBadgeSrc(post);
-    const badgeAlt = getBadgeAlt(post);
+    const type = getNewsType(post);
+    const teamSlug = getTeamSlug(post);
     const eyecatch = getFeaturedImage(post);
     const hasThumb = Boolean(eyecatch);
 
@@ -246,8 +279,8 @@
       || (post.date ? new Date(post.date).getFullYear() : '');
 
     return `
-      <article class="news-item${hasThumb ? ' has-thumb' : ''}" data-category="${escapeHtml(category)}" data-year="${escapeHtml(String(year))}">
-        <div class="news-item__badge"><img src="${escapeHtml(badge)}" alt="${escapeHtml(badgeAlt)}"></div>
+      <article class="news-item${hasThumb ? ' has-thumb' : ''}" data-category="${escapeHtml(category)}" data-type="${escapeHtml(type)}" data-team="${escapeHtml(teamSlug)}" data-year="${escapeHtml(String(year))}">
+        ${renderBadge(post)}
         <div class="news-item__body">
           <time class="news-item__date" datetime="${escapeHtml(post.date || '')}">${formatDate(post.date)}</time>
           <${tag} class="news-item__title"><a href="${detailUrl(post)}">${escapeHtml(title)}</a></${tag}>
@@ -317,9 +350,9 @@
 
   function renderDetail(post) {
     const title = post.title?.rendered || '';
-    const category = getCategorySlug(post);
-    const catLabel =
-      (config.tabCategories || []).find((t) => t.slug === category)?.label || category;
+    const type = getNewsType(post);
+    const typeLabel = getTypeLabel(type);
+    const teamLabel = getTeamLabel(getTeamSlug(post));
     const eyecatch = getFeaturedImage(post);
     const content = post.content?.rendered || '';
 
@@ -327,10 +360,17 @@
       ? `<div class="news-detail__eyecatch"><img src="${escapeHtml(eyecatch)}" alt=""></div>`
       : '';
 
+    const metaHtml = `
+      <div class="news-detail__meta">
+        <span class="news-detail__category news-detail__category--${escapeHtml(type)}">${escapeHtml(typeLabel)}</span>
+        ${teamLabel ? `<span class="news-detail__tag">${escapeHtml(teamLabel)}</span>` : ''}
+      </div>
+    `;
+
     return `
       <article class="news-detail__article">
         <header class="news-detail__header">
-          <span class="news-detail__category">${escapeHtml(catLabel)}</span>
+          ${metaHtml}
           <time class="news-detail__date" datetime="${escapeHtml(post.date || '')}">${formatDate(post.date)}</time>
           <h1 class="news-detail__title">${title}</h1>
         </header>
@@ -341,6 +381,16 @@
         <p class="news-detail__back"><a href="${escapeHtml(config.newsUrl || 'news.html')}" class="section__more">一覧に戻る</a></p>
       </article>
     `;
+  }
+
+  function itemMatchesFilter(item, filter) {
+    if (filter === 'all') return true;
+    if (filter === 'match') return item.dataset.type === 'match';
+    if (filter === 'oshirase') return item.dataset.type === 'notice' || item.dataset.category === 'oshirase';
+    if (TEAM_SLUGS.includes(filter)) {
+      return item.dataset.team === filter || item.dataset.category === filter;
+    }
+    return item.dataset.category === filter;
   }
 
   function bindTabs(tabsEl, listEl) {
@@ -359,9 +409,7 @@
         btn.setAttribute('aria-selected', 'true');
 
         items.forEach((item) => {
-          const category = item.dataset.category;
-          const show = filter === 'all' || category === filter;
-          item.classList.toggle('is-hidden', !show);
+          item.classList.toggle('is-hidden', !itemMatchesFilter(item, filter));
         });
       });
     });
@@ -401,9 +449,13 @@
     for (const listEl of lists) {
       const limit = Number(listEl.dataset.limit) || config.perPageList || 20;
       const headingTag = listEl.dataset.heading || 'h3';
-      const tabsEl = listEl.previousElementSibling?.classList.contains('news-tabs')
+      const filtersEl = listEl.previousElementSibling?.classList.contains('news-filters')
         ? listEl.previousElementSibling
-        : null;
+        : listEl.parentElement?.querySelector('.news-filters') || null;
+      const tabsEl = filtersEl
+        || (listEl.previousElementSibling?.classList.contains('news-tabs')
+          ? listEl.previousElementSibling
+          : listEl.parentElement?.querySelector('.news-tabs') || null);
 
       listEl.innerHTML = '<p class="news-list__loading">読み込み中...</p>';
 

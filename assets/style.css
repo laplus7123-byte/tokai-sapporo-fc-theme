@@ -675,18 +675,36 @@ body:not(.opening-active) .hero__badge {
    NEWS ? hoseifc card style
    ======================================== */
 
-.news-tabs {
+.news-filters {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
+  gap: 12px;
   margin-bottom: 32px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.section--white .news-filters,
+.section--gray .news-filters {
+  border-bottom-color: var(--color-gray-200);
+}
+
+.news-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.news-filters .news-tabs--team {
+  padding-top: 4px;
+}
+
 .section--white .news-tabs,
 .section--gray .news-tabs {
-  border-bottom-color: var(--color-gray-200);
+  border-bottom-color: transparent;
 }
 
 .news-tabs__btn {
@@ -725,7 +743,7 @@ body:not(.opening-active) .hero__badge {
 
 .news-item {
   display: grid;
-  grid-template-columns: 100px 1fr auto;
+  grid-template-columns: 110px 1fr auto;
   gap: 24px;
   padding: 28px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -776,7 +794,94 @@ body:not(.opening-active) .hero__badge {
   background: rgba(255, 209, 0, 0.08);
 }
 
-.news-item__badge img { width: 80px; }
+.news-item__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 96px;
+}
+
+.news-item__badge-cat {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  padding: 6px 10px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+.news-item__badge-cat--match {
+  color: var(--color-yellow);
+  border-color: var(--color-yellow);
+}
+
+.news-item__badge-cat--notice {
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.section--white .news-item__badge-cat--match,
+.section--gray .news-item__badge-cat--match {
+  color: #b8860b;
+  border-color: #b8860b;
+}
+
+.section--white .news-item__badge-cat--notice,
+.section--gray .news-item__badge-cat--notice {
+  color: var(--color-gray-600);
+  border-color: var(--color-gray-400);
+}
+
+.news-item__badge-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 2px 0;
+}
+
+.section--white .news-item__badge-tag,
+.section--gray .news-item__badge-tag {
+  color: var(--color-black);
+}
+
+.news-detail__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.news-detail__category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
+  border: 1px solid currentColor;
+}
+
+.news-detail__category--match {
+  color: var(--color-yellow);
+  border-color: var(--color-yellow);
+}
+
+.news-detail__category--notice {
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.news-detail__tag {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.9);
+}
 
 .news-item__date {
   font-size: 0.75rem;

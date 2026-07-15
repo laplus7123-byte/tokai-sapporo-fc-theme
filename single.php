@@ -6,7 +6,14 @@
 get_header();
 
 $category_slug = tokai_get_post_category_slug();
-$category_label = tokai_get_category_label($category_slug);
+$team_label    = in_array($category_slug, ['top', '2nd', '3rd', '4th'], true)
+    ? tokai_get_category_label($category_slug)
+    : '';
+$badge         = get_post_meta(get_the_ID(), 'news_badge', true);
+$is_match      = $badge === 'match'
+    || in_array($category_slug, ['top', '2nd', '3rd', '4th', 'match'], true);
+$type_label    = $is_match ? '試合結果' : 'お知らせ';
+$type_class    = $is_match ? 'match' : 'notice';
 ?>
 
 <?php tokai_page_hero('News', 'ニュース'); ?>
@@ -15,7 +22,12 @@ $category_label = tokai_get_category_label($category_slug);
   <div class="section__inner section__inner--narrow">
     <article class="news-detail__article">
       <header class="news-detail__header">
-        <span class="news-detail__category"><?php echo esc_html($category_label); ?></span>
+        <div class="news-detail__meta">
+          <span class="news-detail__category news-detail__category--<?php echo esc_attr($type_class); ?>"><?php echo esc_html($type_label); ?></span>
+          <?php if ($team_label) : ?>
+            <span class="news-detail__tag"><?php echo esc_html($team_label); ?></span>
+          <?php endif; ?>
+        </div>
         <time class="news-detail__date" datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(tokai_format_post_date()); ?></time>
         <h1 class="news-detail__title"><?php the_title(); ?></h1>
       </header>
