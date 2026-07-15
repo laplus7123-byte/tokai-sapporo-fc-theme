@@ -1,0 +1,107 @@
+.tokai-members-admin__toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.tokai-members-admin__toolbar--bottom {
+  margin-top: 28px;
+}
+
+.tokai-members-panel {
+  background: #fff;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.tokai-members-panel__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #dcdcde;
+  background: #f6f7f7;
+}
+
+.tokai-members-panel__head h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.tokai-members-table .col-sort {
+  width: 36px;
+}
+
+.tokai-members-table .col-image {
+  width: 180px;
+}
+
+.tokai-members-table .col-role {
+  width: 180px;
+}
+
+.tokai-members-table .col-action {
+  width: 72px;
+  text-align: right;
+}
+
+.tokai-sort-handle {
+  cursor: grab;
+  color: #787c82;
+}
+
+.tokai-member-image__preview {
+  width: 72px;
+  height: 72px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #111;
+  margin-bottom: 8px;
+}
+
+.tokai-member-image__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.tokai-member-image .button-link {
+  margin-left: 8px;
+}
+
+.tokai-members-admin__toolbar--top {
+  margin-top: 0;
+}
+
+.tokai-members-import {
+  margin: 0;
+}
+
+.tokai-instagram-thumb__preview {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  background: #111;
+  margin-bottom: 8px;
+}
+
+.tokai-instagram-thumb__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ui-sortable-helper {
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.tokai-member-row.is-empty .tokai-member-image__preview {
+  opacity: 0.35;
+}
