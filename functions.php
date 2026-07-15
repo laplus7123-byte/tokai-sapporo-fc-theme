@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('TOKAI_THEME_VERSION', '1.0.2');
+define('TOKAI_THEME_VERSION', '1.0.3');
 
 require_once get_template_directory() . '/inc/helpers.php';
 require_once get_template_directory() . '/inc/tokai-news-fields.php';

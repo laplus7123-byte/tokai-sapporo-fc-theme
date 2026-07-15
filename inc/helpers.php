@@ -48,6 +48,50 @@ function tokai_news_years() {
     return range($current, $current - 2);
 }
 
+/**
+ * スポンサーロゴ一覧（記事下などで共通利用）
+ */
+function tokai_sponsor_logos() {
+    return [
+        ['name' => '上田商会グループ（UEDA GROUP）', 'logo' => 'p_1728962062.png', 'url' => 'https://ueda-gr.jp/'],
+        ['name' => 'CUBERU（クベル）',                 'logo' => 'p_1728962005.png', 'url' => 'https://cuberu.jp/'],
+        ['name' => 'カーコレクション',                  'logo' => 'p_1728962080.png', 'url' => 'https://carcolle.info/index.html'],
+        ['name' => 'カリースタンド',                    'logo' => 'p_1728962145.png', 'url' => 'https://currystand-sapporo.com/'],
+        ['name' => '株式会社ラリーホームズ',            'logo' => 'p_1728962207.png', 'url' => 'https://rally-homes-info.my.canva.site/'],
+        ['name' => '標津羊羹本舗',                       'logo' => 'p_1728962272.png', 'url' => 'https://shibetsuyoukan.jp/'],
+        ['name' => '株式会社ソルトワークス（Saltworks）', 'logo' => 'p_1728962318.png', 'url' => 'https://saltworks.jp/'],
+        ['name' => '株式会社La plus',                   'logo' => 'sponsor-laplus.png', 'url' => 'https://laplusgroup.com/'],
+    ];
+}
+
+/**
+ * 記事下などに表示するスポンサーロゴ帯
+ */
+function tokai_render_sponsor_strip() {
+    $sponsors = tokai_sponsor_logos();
+    if (empty($sponsors)) {
+        return;
+    }
+    ?>
+    <aside class="article-sponsors" aria-label="スポンサー">
+      <p class="article-sponsors__heading">
+        <span class="article-sponsors__en">SPONSORS</span>
+        <span class="article-sponsors__ja">オフィシャルスポンサー</span>
+      </p>
+      <div class="article-sponsors__grid">
+        <?php foreach ($sponsors as $sponsor) : ?>
+          <a href="<?php echo esc_url($sponsor['url']); ?>" target="_blank" rel="noopener" class="article-sponsors__item">
+            <img src="<?php echo esc_url(tokai_asset($sponsor['logo'])); ?>" alt="<?php echo esc_attr($sponsor['name']); ?>" loading="lazy">
+          </a>
+        <?php endforeach; ?>
+      </div>
+      <p class="article-sponsors__note">
+        <a href="<?php echo esc_url(tokai_page_url('sponsor')); ?>">スポンサー一覧を見る</a>
+      </p>
+    </aside>
+    <?php
+}
+
 function tokai_format_post_date($post_id = null) {
     $post_id = $post_id ?: get_the_ID();
     $date    = get_post_time('U', true, $post_id);

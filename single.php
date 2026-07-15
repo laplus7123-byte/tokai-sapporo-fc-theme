@@ -46,6 +46,8 @@ $type_class    = $is_match ? 'match' : 'notice';
 
       <?php echo tokai_render_members_table(); ?>
 
+      <?php tokai_render_sponsor_strip(); ?>
+
       <p class="news-detail__back">
         <a href="<?php echo esc_url(tokai_page_url('news')); ?>" class="section__more">一覧に戻る</a>
       </p>
