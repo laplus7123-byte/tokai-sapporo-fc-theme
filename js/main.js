@@ -53,7 +53,27 @@ function initMobileNav() {
     });
   }
 
-  nav.querySelectorAll('a').forEach(link => {
+  nav.querySelectorAll('.header__submenu-year').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const group = btn.closest('.header__submenu-year-group');
+      if (!group) return;
+      const open = !group.classList.contains('is-open');
+      group.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      const panel = group.querySelector('.header__submenu-year-panel');
+      if (panel) {
+        if (open) {
+          panel.removeAttribute('hidden');
+        } else {
+          panel.setAttribute('hidden', '');
+        }
+      }
+    });
+  });
+
+  nav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', (e) => {
       if (link === subLink && isMobile() && e.defaultPrevented) return;
       toggle.classList.remove('is-open');

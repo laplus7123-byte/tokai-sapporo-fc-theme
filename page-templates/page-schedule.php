@@ -17,9 +17,13 @@ tokai_page_hero('Schedule', 'スケジュール');
         style="border:0"
         frameborder="0"
         scrolling="no"
-        loading="lazy"></iframe>
+        loading="lazy"
+        allowfullscreen></iframe>
     </div>
-    <p class="note">※ スケジュールは変更になる場合があります。最新情報はNEWSをご確認ください。</p>
+    <p class="gcal__note">
+      <a href="<?php echo esc_url(tokai_get_timetree_open_url()); ?>" target="_blank" rel="noopener noreferrer">TimeTreeで開く</a>
+      <span>予定の追加・編集はTimeTreeアプリから行えます。</span>
+    </p>
   </div>
 </section>
 

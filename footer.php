@@ -6,8 +6,10 @@
       </a>
       <nav class="footer__nav">
         <a href="<?php echo esc_url(tokai_page_url('news')); ?>">News</a>
+        <a href="<?php echo esc_url(tokai_page_url('gallery')); ?>">Gallery</a>
         <a href="<?php echo esc_url(tokai_page_url('members')); ?>">Members</a>
         <a href="<?php echo esc_url(tokai_page_url('schedule')); ?>">Schedule</a>
+        <a href="<?php echo esc_url(tokai_page_url('application')); ?>">Application</a>
         <a href="<?php echo esc_url(tokai_page_url('sponsor')); ?>">Sponsor</a>
         <a href="<?php echo esc_url(tokai_page_url('contact')); ?>">Contact</a>
       </nav>

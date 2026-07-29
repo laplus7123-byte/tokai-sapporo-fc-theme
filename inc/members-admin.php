@@ -63,7 +63,10 @@ function tokai_members_collect_players_from_post() {
 
             $players[] = [
                 'name'     => sanitize_text_field(wp_unslash($player['name'] ?? '')),
+                'romaji'   => sanitize_text_field(wp_unslash($player['romaji'] ?? '')),
                 'grade'    => $grade,
+                'number'   => sanitize_text_field(wp_unslash($player['number'] ?? '')),
+                'previous' => sanitize_text_field(wp_unslash($player['previous'] ?? '')),
                 'image_id' => absint($player['image_id'] ?? 0),
                 'image'    => esc_url_raw(wp_unslash($player['image'] ?? '')),
             ];
@@ -79,14 +82,17 @@ function tokai_members_collect_players_from_post() {
 
             $players[] = [
                 'name'     => sanitize_text_field(wp_unslash($player['name'] ?? '')),
+                'romaji'   => sanitize_text_field(wp_unslash($player['romaji'] ?? '')),
                 'grade'    => sanitize_text_field(wp_unslash($player['grade'] ?? '')),
+                'number'   => sanitize_text_field(wp_unslash($player['number'] ?? '')),
+                'previous' => sanitize_text_field(wp_unslash($player['previous'] ?? '')),
                 'image_id' => absint($player['image_id'] ?? 0),
                 'image'    => esc_url_raw(wp_unslash($player['image'] ?? '')),
             ];
         }
     }
 
-    return $players;
+    return tokai_sort_players_by_number($players);
 }
 
 function tokai_members_admin_page() {
@@ -123,6 +129,9 @@ function tokai_members_admin_page() {
                 ];
             }
         }
+
+        // 管理画面フォームに無い crop 値は既存データから引き継ぐ
+        $payload = tokai_members_preserve_crop_fields($payload);
 
         $saved = tokai_save_members_raw($payload);
         if (is_wp_error($saved)) {
@@ -223,9 +232,9 @@ function tokai_members_admin_page() {
 
         <?php foreach ($grades as $grade) :
             $grade_key = $grade_keys[$grade];
-            $grade_players = array_values(array_filter($players, function ($p) use ($grade) {
+            $grade_players = tokai_sort_players_by_number(array_values(array_filter($players, function ($p) use ($grade) {
                 return ($p['grade'] ?? '') === $grade;
-            }));
+            })));
             ?>
           <section class="tokai-members-panel" data-grade="<?php echo esc_attr($grade); ?>">
             <div class="tokai-members-panel__head">
@@ -237,7 +246,10 @@ function tokai_members_admin_page() {
                 <tr>
                   <th class="col-sort"></th>
                   <th class="col-image">画像</th>
+                  <th class="col-number">背番号</th>
                   <th class="col-name">選手名</th>
+                  <th class="col-romaji">ローマ字</th>
+                  <th class="col-previous">前所属</th>
                   <th class="col-action"></th>
                 </tr>
               </thead>
@@ -286,7 +298,7 @@ function tokai_members_admin_page() {
 
       <template id="tokai-player-row-template">
         <?php tokai_members_admin_render_player_row(
-            ['name' => '', 'grade' => '__GRADE__', 'image_id' => 0, 'image' => ''],
+            ['name' => '', 'romaji' => '', 'grade' => '__GRADE__', 'number' => '', 'previous' => '', 'image_id' => 0, 'image' => ''],
             '__GRADE__',
             '__GRADE_KEY__',
             '__INDEX__'
@@ -322,9 +334,18 @@ function tokai_members_admin_render_player_row($player, $grade, $grade_key, $ind
     <tr class="tokai-member-row">
       <td class="col-sort"><span class="tokai-sort-handle dashicons dashicons-menu" aria-hidden="true"></span></td>
       <td class="col-image"><?php tokai_members_admin_image_cell($image_id, $image_url, $idx); ?></td>
+      <td class="col-number">
+        <input type="text" class="small-text" name="<?php echo esc_attr($idx); ?>[number]" value="<?php echo esc_attr($player['number'] ?? ''); ?>" placeholder="10" inputmode="numeric">
+      </td>
       <td class="col-name">
         <input type="text" class="regular-text" name="<?php echo esc_attr($idx); ?>[name]" value="<?php echo esc_attr($player['name'] ?? ''); ?>" placeholder="山田 太郎">
         <input type="hidden" name="<?php echo esc_attr($idx); ?>[grade]" value="<?php echo esc_attr($grade); ?>">
+      </td>
+      <td class="col-romaji">
+        <input type="text" class="regular-text" name="<?php echo esc_attr($idx); ?>[romaji]" value="<?php echo esc_attr($player['romaji'] ?? ''); ?>" placeholder="Taro.Y">
+      </td>
+      <td class="col-previous">
+        <input type="text" class="regular-text" name="<?php echo esc_attr($idx); ?>[previous]" value="<?php echo esc_attr($player['previous'] ?? ''); ?>" placeholder="前所属クラブ">
       </td>
       <td class="col-action"><button type="button" class="button-link-delete tokai-remove-row">削除</button></td>
     </tr>

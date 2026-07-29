@@ -37,6 +37,18 @@
 }
 
 .tokai-members-table .col-image {
+  width: 140px;
+}
+
+.tokai-members-table .col-number {
+  width: 72px;
+}
+
+.tokai-members-table .col-romaji {
+  width: 140px;
+}
+
+.tokai-members-table .col-previous {
   width: 180px;
 }
 

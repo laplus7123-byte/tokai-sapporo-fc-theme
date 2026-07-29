@@ -5,955 +5,1407 @@
       "name": "石塚 公二",
       "role": "総監督",
       "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1746947346.jpeg",
-      "cropX": 48.1,
-      "cropY": 33.1,
-      "cropZoom": 0.91
+      "cropX": 48.2,
+      "cropY": 34.8,
+      "cropZoom": 1.08,
+      "cropTy": -0.8
     },
     {
       "name": "稲辺 史郎",
       "role": "監督",
       "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/1@p_1746947519.jpeg",
-      "cropX": 47.7,
-      "cropY": 45.9,
-      "cropZoom": 0.78
+      "cropX": 47.6,
+      "cropY": 48.2,
+      "cropZoom": 1.08,
+      "cropTy": -10.0
     },
     {
       "name": "池内 友彦",
       "role": "コーチ",
       "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1746947384.jpeg",
       "cropX": 49.3,
-      "cropY": 43.8,
-      "cropZoom": 0.67
+      "cropY": 44.6,
+      "cropZoom": 1.08,
+      "cropTy": -10.0
     },
     {
       "name": "蛯沢 匠吾",
       "role": "GKコーチ",
       "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1590134079.jpg",
-      "cropX": 46.6,
-      "cropY": 35.4,
-      "cropZoom": 0.67
+      "cropX": 47.3,
+      "cropY": 36.9,
+      "cropZoom": 1.08,
+      "cropTy": -2.9
     },
     {
       "name": "日比 純太郎",
       "role": "トレーナー",
       "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1590134102.jpg",
-      "cropX": 49.2,
-      "cropY": 41.8,
-      "cropZoom": 0.75
+      "cropX": 49.7,
+      "cropY": 43.4,
+      "cropZoom": 1.08,
+      "cropTy": -9.4
     },
     {
       "name": "浅野 遼",
       "role": "コーチ",
       "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1746947458.jpeg",
-      "cropX": 48.8,
-      "cropY": 35.9,
-      "cropZoom": 0.97
+      "cropX": 48.6,
+      "cropY": 38.1,
+      "cropZoom": 1.08,
+      "cropTy": -4.1
     },
     {
       "name": "岡 健太",
       "role": "コーチ",
       "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1746947539.jpeg",
-      "cropX": 51.0,
-      "cropY": 42.2,
-      "cropZoom": 0.77
+      "cropX": 51.1,
+      "cropY": 43.3,
+      "cropZoom": 1.08,
+      "cropTy": -9.3
     },
     {
       "name": "松井 誠",
       "role": "戦術分析コーチ",
       "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1530518408.jpg",
-      "cropX": 48.2,
-      "cropY": 42.0,
-      "cropZoom": 0.62
+      "cropX": 48.3,
+      "cropY": 5.9,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
     }
   ],
   "players": [
     {
-      "name": "相吉 幸哉",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365349.jpeg",
-      "cropX": 50.8,
-      "cropY": 29.7,
-      "cropZoom": 0.66
-    },
-    {
-      "name": "安達 俐仁",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365813.jpeg",
-      "cropX": 50.6,
-      "cropY": 27.6,
-      "cropZoom": 0.77
-    },
-    {
-      "name": "阿部 圭吾",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373383.jpeg",
-      "cropX": 51.6,
-      "cropY": 31.8,
-      "cropZoom": 0.72
-    },
-    {
-      "name": "阿部 旬吾",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373274.jpeg",
-      "cropX": 50.7,
-      "cropY": 29.5,
-      "cropZoom": 0.89
-    },
-    {
-      "name": "阿部 大輝",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373818.jpeg",
-      "cropX": 46.7,
-      "cropY": 30.6,
-      "cropZoom": 0.67
-    },
-    {
-      "name": "荒木 天翔",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364840.jpeg",
-      "cropX": 48.2,
-      "cropY": 33.6,
-      "cropZoom": 0.69
-    },
-    {
-      "name": "五十嵐 悠",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365638.jpeg",
-      "cropX": 47.8,
-      "cropY": 36.4,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "池田 健悟",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779370071.jpeg",
-      "cropX": 50.6,
-      "cropY": 27.2,
-      "cropZoom": 0.79
-    },
-    {
-      "name": "市島 快隼",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365258.jpeg",
-      "cropX": 48.8,
-      "cropY": 35.2,
-      "cropZoom": 0.69
-    },
-    {
-      "name": "伊藤 蒼蓮",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364937.jpeg",
-      "cropX": 49.0,
-      "cropY": 43.3,
-      "cropZoom": 0.62
-    },
-    {
-      "name": "今 維希",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373219.jpeg",
-      "cropX": 49.0,
-      "cropY": 25.1,
-      "cropZoom": 0.72
-    },
-    {
-      "name": "上田 蒼空",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989645.jpeg",
-      "cropX": 50.2,
-      "cropY": 36.9,
-      "cropZoom": 0.7
-    },
-    {
-      "name": "植村 飛向",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365697.jpeg",
-      "cropX": 48.5,
-      "cropY": 38.3,
-      "cropZoom": 0.66
-    },
-    {
-      "name": "碓井 月都",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364668.jpeg",
-      "cropX": 46.4,
-      "cropY": 33.7,
-      "cropZoom": 0.8
-    },
-    {
-      "name": "浦重 奏牙",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373694.jpeg",
-      "cropX": 48.1,
-      "cropY": 34.9,
-      "cropZoom": 0.62
-    },
-    {
-      "name": "大川 優成",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365719.jpeg",
-      "cropX": 49.6,
-      "cropY": 29.1,
-      "cropZoom": 0.76
-    },
-    {
-      "name": "太田 來穏",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365156.jpeg",
-      "cropX": 51.5,
-      "cropY": 36.3,
-      "cropZoom": 0.75
-    },
-    {
-      "name": "大月 虎之介",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365437.jpeg",
-      "cropX": 51.9,
-      "cropY": 33.7,
-      "cropZoom": 0.74
-    },
-    {
-      "name": "大西 風歌",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365513.jpeg",
-      "cropX": 47.2,
-      "cropY": 33.7,
-      "cropZoom": 0.62
-    },
-    {
-      "name": "岡田 璃音",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364925.jpeg",
-      "cropX": 50.7,
-      "cropY": 32.2,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "織田 楓芽",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365520.jpeg",
-      "cropX": 46.0,
-      "cropY": 34.5,
-      "cropZoom": 0.8
-    },
-    {
-      "name": "小野寺 瞬",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365544.jpeg",
-      "cropX": 51.2,
-      "cropY": 30.9,
-      "cropZoom": 0.74
-    },
-    {
-      "name": "小浜 颯介",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989503.jpeg",
-      "cropX": 49.8,
-      "cropY": 35.8,
-      "cropZoom": 0.62
-    },
-    {
-      "name": "加賀谷 蓮",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364611.jpeg",
-      "cropX": 45.3,
-      "cropY": 35.2,
-      "cropZoom": 0.7
-    },
-    {
-      "name": "笠井 悠登",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364884.jpeg",
-      "cropX": 49.0,
-      "cropY": 36.8,
-      "cropZoom": 0.75
-    },
-    {
-      "name": "笠原 瑛心",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365414.jpeg",
-      "cropX": 48.6,
-      "cropY": 41.7,
-      "cropZoom": 0.75
-    },
-    {
-      "name": "梶原 碧",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365125.jpeg",
-      "cropX": 46.1,
-      "cropY": 33.2,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "粕谷 大翔",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365087.jpeg",
-      "cropX": 48.0,
-      "cropY": 44.6,
-      "cropZoom": 0.66
-    },
-    {
-      "name": "粕谷 優大",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365844.jpeg",
-      "cropX": 46.8,
-      "cropY": 32.1,
-      "cropZoom": 0.91
-    },
-    {
-      "name": "加藤 槙",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364706.jpeg",
-      "cropX": 47.9,
-      "cropY": 36.6,
-      "cropZoom": 0.66
-    },
-    {
-      "name": "加藤 遼馬",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365183.jpeg",
-      "cropX": 49.0,
-      "cropY": 35.7,
-      "cropZoom": 0.64
-    },
-    {
-      "name": "河合 虹希",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365361.jpeg",
-      "cropX": 49.5,
-      "cropY": 38.3,
-      "cropZoom": 0.78
-    },
-    {
-      "name": "川岸 蒼空",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373546.jpeg",
-      "cropX": 46.7,
-      "cropY": 35.0,
-      "cropZoom": 0.79
-    },
-    {
-      "name": "菊池 凌牙",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373178.jpeg",
-      "cropX": 49.4,
-      "cropY": 27.3,
-      "cropZoom": 0.82
-    },
-    {
-      "name": "北村 丈太郎",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373652.jpeg",
-      "cropX": 51.5,
-      "cropY": 24.4,
-      "cropZoom": 0.66
-    },
-    {
-      "name": "国安 諒真",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364962.jpeg",
-      "cropX": 47.5,
-      "cropY": 38.6,
-      "cropZoom": 0.67
-    },
-    {
-      "name": "倉又 圭都",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365388.jpeg",
-      "cropX": 49.5,
-      "cropY": 35.4,
-      "cropZoom": 0.75
-    },
-    {
-      "name": "小原 絢斗",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364866.jpeg",
-      "cropX": 46.3,
-      "cropY": 39.6,
-      "cropZoom": 0.75
-    },
-    {
-      "name": "近藤 大翔",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365234.jpeg",
-      "cropX": 46.6,
-      "cropY": 38.1,
-      "cropZoom": 0.67
-    },
-    {
-      "name": "根本 輝",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365460.jpeg",
-      "cropX": 50.6,
-      "cropY": 29.6,
-      "cropZoom": 0.69
-    },
-    {
-      "name": "齋藤 獅音",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365389.jpeg",
-      "cropX": 49.8,
-      "cropY": 34.8,
-      "cropZoom": 0.71
-    },
-    {
-      "name": "坂本 智星",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364760.jpeg",
-      "cropX": 47.4,
-      "cropY": 42.7,
-      "cropZoom": 0.74
-    },
-    {
-      "name": "酒谷 元崇",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373778.jpeg",
-      "cropX": 51.0,
-      "cropY": 35.5,
-      "cropZoom": 0.73
-    },
-    {
-      "name": "櫻岡 天晴",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/1@p_1779365697.jpeg",
-      "cropX": 49.1,
-      "cropY": 32.8,
-      "cropZoom": 0.7
-    },
-    {
-      "name": "佐々木 蒼羽",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779370175.jpeg",
-      "cropX": 51.5,
-      "cropY": 32.0,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "佐竹 玲穏",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779370241.jpeg",
-      "cropX": 50.4,
-      "cropY": 29.8,
-      "cropZoom": 0.73
-    },
-    {
-      "name": "郷 翔真",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364854.jpeg",
-      "cropX": 50.5,
-      "cropY": 24.9,
-      "cropZoom": 0.88
-    },
-    {
-      "name": "佐藤 颯雅",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/1@p_1779365770.jpeg",
-      "cropX": 49.8,
-      "cropY": 37.7,
-      "cropZoom": 0.66
-    },
-    {
-      "name": "佐藤 翔馬",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365717.jpeg",
-      "cropX": 51.0,
-      "cropY": 41.2,
-      "cropZoom": 0.62
-    },
-    {
-      "name": "佐藤 森羅",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365122.jpeg",
-      "cropX": 50.3,
-      "cropY": 36.2,
-      "cropZoom": 0.96
-    },
-    {
-      "name": "佐藤 諒弥",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365867.jpeg",
-      "cropX": 50.3,
-      "cropY": 36.1,
-      "cropZoom": 0.69
-    },
-    {
-      "name": "山中 敦喜",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364987.jpeg",
-      "cropX": 47.4,
-      "cropY": 41.4,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "志賀 斗威",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365792.jpeg",
-      "cropX": 48.1,
-      "cropY": 31.6,
-      "cropZoom": 0.72
-    },
-    {
-      "name": "進藤 暖真",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989562.jpeg",
-      "cropX": 48.3,
-      "cropY": 42.1,
-      "cropZoom": 0.79
-    },
-    {
-      "name": "菅田 吏央",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373598.jpeg",
-      "cropX": 50.4,
-      "cropY": 28.6,
-      "cropZoom": 0.66
-    },
-    {
-      "name": "菅原 優空",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373327.jpeg",
-      "cropX": 49.0,
-      "cropY": 33.1,
-      "cropZoom": 0.73
-    },
-    {
-      "name": "菅原 悠陽",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365545.jpeg",
-      "cropX": 46.0,
-      "cropY": 41.5,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "関原 樹",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365304.jpeg",
-      "cropX": 48.9,
-      "cropY": 35.7,
-      "cropZoom": 0.69
-    },
-    {
-      "name": "平 潤偉",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989523.jpeg",
-      "cropX": 48.5,
-      "cropY": 29.3,
-      "cropZoom": 0.62
-    },
-    {
-      "name": "高野 佑太",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365980.jpeg",
-      "cropX": 51.2,
-      "cropY": 30.7,
-      "cropZoom": 0.69
-    },
-    {
-      "name": "高橋 慶次",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365253.jpeg",
-      "cropX": 50.8,
-      "cropY": 29.1,
-      "cropZoom": 0.73
-    },
-    {
-      "name": "高橋 琥央",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365892.jpeg",
-      "cropX": 48.5,
-      "cropY": 30.6,
-      "cropZoom": 0.77
-    },
-    {
-      "name": "高橋 虹輝",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365441.jpeg",
-      "cropX": 47.3,
-      "cropY": 36.2,
-      "cropZoom": 0.69
-    },
-    {
-      "name": "高橋 春翔",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779370210.jpeg",
-      "cropX": 51.8,
-      "cropY": 27.5,
-      "cropZoom": 0.74
-    },
-    {
-      "name": "高橋 遼",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365596.jpeg",
-      "cropX": 48.7,
-      "cropY": 40.8,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "竹原 琉生",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/1@p_1779365867.jpeg",
-      "cropX": 48.6,
-      "cropY": 30.3,
-      "cropZoom": 0.73
-    },
-    {
-      "name": "棚橋 柚稀",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364675.jpeg",
-      "cropX": 46.7,
-      "cropY": 33.7,
-      "cropZoom": 0.79
-    },
-    {
-      "name": "中力 泰",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364747.jpeg",
-      "cropX": 48.8,
-      "cropY": 38.7,
-      "cropZoom": 0.73
-    },
-    {
-      "name": "珍田 洸希",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365495.jpeg",
-      "cropX": 48.1,
-      "cropY": 37.6,
-      "cropZoom": 0.72
-    },
-    {
-      "name": "東堂 良明",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364630.jpeg",
-      "cropX": 49.6,
-      "cropY": 37.1,
-      "cropZoom": 0.64
-    },
-    {
-      "name": "戸田 陽基",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365920.jpeg",
-      "cropX": 48.2,
-      "cropY": 28.7,
-      "cropZoom": 0.78
-    },
-    {
-      "name": "土門 興明",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779450767.jpeg",
-      "cropX": 50.7,
-      "cropY": 39.3,
-      "cropZoom": 0.8
-    },
-    {
-      "name": "中井 乙寧",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779366258.jpeg",
-      "cropX": 48.9,
-      "cropY": 42.9,
-      "cropZoom": 0.86
-    },
-    {
-      "name": "長畑 朱樂",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365180.jpeg",
-      "cropX": 50.1,
-      "cropY": 36.4,
-      "cropZoom": 0.78
-    },
-    {
-      "name": "橋本 瑛",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364728.jpeg",
-      "cropX": 47.2,
-      "cropY": 38.4,
-      "cropZoom": 0.67
-    },
-    {
       "name": "橋本 虎太郎",
+      "romaji": "Kotaro.H",
       "grade": "1年生",
+      "number": "1",
+      "previous": "FC DENOVA",
       "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779835748.jpeg",
-      "cropX": 49.0,
-      "cropY": 39.1,
-      "cropZoom": 0.79
-    },
-    {
-      "name": "羽田 成禮",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779369787.jpeg",
-      "cropX": 50.4,
-      "cropY": 32.1,
-      "cropZoom": 0.83
-    },
-    {
-      "name": "濱 晃太朗",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365665.jpeg",
-      "cropX": 50.9,
-      "cropY": 34.9,
-      "cropZoom": 0.69
-    },
-    {
-      "name": "早坂 秋音",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364700.jpeg",
-      "cropX": 48.5,
-      "cropY": 45.1,
-      "cropZoom": 0.64
-    },
-    {
-      "name": "林 虎来",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779369820.jpeg",
-      "cropX": 49.6,
-      "cropY": 30.7,
-      "cropZoom": 0.83
-    },
-    {
-      "name": "樋原 美羽",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1746929563.jpeg",
-      "cropX": 48.6,
-      "cropY": 37.9,
-      "cropZoom": 0.71
-    },
-    {
-      "name": "藤木 仁平",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365750.jpeg",
-      "cropX": 48.1,
-      "cropY": 31.9,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "藤田 陸斗",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373469.jpeg",
-      "cropX": 49.0,
-      "cropY": 30.2,
-      "cropZoom": 0.71
-    },
-    {
-      "name": "古谷 太一",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779835837.jpeg",
-      "cropX": 46.6,
-      "cropY": 41.9,
-      "cropZoom": 0.83
-    },
-    {
-      "name": "平野 壮琉",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373574.jpeg",
-      "cropX": 50.0,
-      "cropY": 26.0,
-      "cropZoom": 0.71
-    },
-    {
-      "name": "干場 琉聖",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989615.jpeg",
-      "cropX": 47.2,
-      "cropY": 38.7,
-      "cropZoom": 0.79
-    },
-    {
-      "name": "細川 旺雅",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373726.jpeg",
-      "cropX": 51.3,
-      "cropY": 29.6,
-      "cropZoom": 0.65
-    },
-    {
-      "name": "堀川 泰雅",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779374039.jpeg",
-      "cropX": 51.0,
-      "cropY": 29.4,
-      "cropZoom": 0.71
-    },
-    {
-      "name": "町田 祐太",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365673.jpeg",
-      "cropX": 50.0,
-      "cropY": 34.2,
-      "cropZoom": 0.64
-    },
-    {
-      "name": "松浦 龍雅",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365210.jpeg",
-      "cropX": 48.7,
-      "cropY": 41.4,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "丸山 琉楓",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365770.jpeg",
-      "cropX": 47.7,
-      "cropY": 27.4,
-      "cropZoom": 0.81
-    },
-    {
-      "name": "三浦 兜馬",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373522.jpeg",
-      "cropX": 51.5,
-      "cropY": 28.5,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "溝江 星空",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364914.jpeg",
-      "cropX": 49.5,
-      "cropY": 40.4,
-      "cropZoom": 0.73
-    },
-    {
-      "name": "三井 遥央",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373499.jpeg",
-      "cropX": 50.2,
-      "cropY": 28.4,
-      "cropZoom": 0.75
-    },
-    {
-      "name": "三熊 虎大郎",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779835814.jpeg",
-      "cropX": 46.8,
-      "cropY": 41.7,
-      "cropZoom": 0.76
-    },
-    {
-      "name": "美濃 興希那",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364331.jpeg",
-      "cropX": 45.9,
-      "cropY": 35.1,
-      "cropZoom": 0.76
-    },
-    {
-      "name": "箕浦 詩桜",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779366111.jpeg",
-      "cropX": 49.7,
-      "cropY": 29.4,
-      "cropZoom": 0.64
-    },
-    {
-      "name": "美濃島 颯太",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365738.jpeg",
-      "cropX": 47.1,
-      "cropY": 32.0,
-      "cropZoom": 0.67
-    },
-    {
-      "name": "宮崎 優宇",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365023.jpeg",
-      "cropX": 48.9,
-      "cropY": 39.8,
-      "cropZoom": 0.65
-    },
-    {
-      "name": "棟方 銀",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373301.jpeg",
-      "cropX": 50.6,
-      "cropY": 31.2,
-      "cropZoom": 0.74
-    },
-    {
-      "name": "村尾 慶翔",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373361.jpeg",
-      "cropX": 52.2,
-      "cropY": 29.1,
-      "cropZoom": 0.7
-    },
-    {
-      "name": "村上 晴基",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373629.jpeg",
-      "cropX": 47.9,
-      "cropY": 32.3,
-      "cropZoom": 0.69
-    },
-    {
-      "name": "森 勇颯",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365482.jpeg",
-      "cropX": 48.8,
-      "cropY": 35.8,
-      "cropZoom": 0.65
-    },
-    {
-      "name": "森田 雄心",
-      "grade": "2年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365208.jpeg",
-      "cropX": 48.0,
-      "cropY": 29.2,
-      "cropZoom": 0.71
-    },
-    {
-      "name": "山口 陸斗",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989484.jpeg",
-      "cropX": 48.7,
-      "cropY": 33.3,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "山保 英士",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373748.jpeg",
-      "cropX": 50.3,
-      "cropY": 25.8,
-      "cropZoom": 0.68
-    },
-    {
-      "name": "山屋 亮磨",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365611.jpeg",
-      "cropX": 48.2,
-      "cropY": 30.1,
-      "cropZoom": 0.82
-    },
-    {
-      "name": "由良 樹",
-      "grade": "3年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365646.jpeg",
-      "cropX": 47.7,
-      "cropY": 30.6,
-      "cropZoom": 0.77
-    },
-    {
-      "name": "由良 栞",
-      "grade": "1年生",
-      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779450726.jpeg",
-      "cropX": 49.0,
-      "cropY": 29.2,
-      "cropZoom": 0.76
+      "cropX": 49.2,
+      "cropY": 42.0,
+      "cropZoom": 1.08,
+      "cropTy": -8.0
     },
     {
       "name": "吉田 琉人",
+      "romaji": "Ryuto.Y",
       "grade": "1年生",
+      "number": "2",
+      "previous": "札幌ジュニアFC",
       "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779369856.jpeg",
-      "cropX": 50.0,
-      "cropY": 29.3,
-      "cropZoom": 0.69
+      "cropX": 49.8,
+      "cropY": 10.7,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "池田 健悟",
+      "romaji": "Kengo.I",
+      "grade": "1年生",
+      "number": "3",
+      "previous": "One Eight FC",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779370071.jpeg",
+      "cropX": 51.0,
+      "cropY": 11.9,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "佐々木 蒼羽",
+      "romaji": "Sou.S",
+      "grade": "1年生",
+      "number": "4",
+      "previous": "CASCAVEL SAPPORO",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779370175.jpeg",
+      "cropX": 51.8,
+      "cropY": 32.7,
+      "cropZoom": 1.08,
+      "cropTy": 1.3
+    },
+    {
+      "name": "林 虎来",
+      "romaji": "Torai.H",
+      "grade": "1年生",
+      "number": "5",
+      "previous": "sss札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779369820.jpeg",
+      "cropX": 49.3,
+      "cropY": 33.6,
+      "cropZoom": 1.08,
+      "cropTy": 0.4
+    },
+    {
+      "name": "山口 陸斗",
+      "romaji": "Rikuto.Y",
+      "grade": "1年生",
+      "number": "6",
+      "previous": "プログレッソ十勝",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989484.jpeg",
+      "cropX": 48.8,
+      "cropY": 34.6,
+      "cropZoom": 1.08,
+      "cropTy": -0.6
+    },
+    {
+      "name": "佐竹 玲穏",
+      "romaji": "Reon.S",
+      "grade": "1年生",
+      "number": "7",
+      "previous": "アンフィニ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779370241.jpeg",
+      "cropX": 50.8,
+      "cropY": 31.4,
+      "cropZoom": 1.08,
+      "cropTy": 2.6
+    },
+    {
+      "name": "北村 丈太郎",
+      "romaji": "Jotaro.K",
+      "grade": "1年生",
+      "number": "8",
+      "previous": "コンサドーレ釧路",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373652.jpeg",
+      "cropX": 51.9,
+      "cropY": 4.6,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "三井 遥央",
+      "romaji": "Haruto.M",
+      "grade": "1年生",
+      "number": "9",
+      "previous": "プログレッソ十勝",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373499.jpeg",
+      "cropX": 50.1,
+      "cropY": 11.8,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "三浦 兜馬",
+      "romaji": "Toma.M",
+      "grade": "1年生",
+      "number": "11",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373522.jpeg",
+      "cropX": 51.3,
+      "cropY": 9.7,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "棟方 銀",
+      "romaji": "Gin.M",
+      "grade": "1年生",
+      "number": "13",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373301.jpeg",
+      "cropX": 50.5,
+      "cropY": 33.7,
+      "cropZoom": 1.08,
+      "cropTy": 0.3
+    },
+    {
+      "name": "細川 旺雅",
+      "romaji": "Ouga.H",
+      "grade": "1年生",
+      "number": "14",
+      "previous": "真駒内中学",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373726.jpeg",
+      "cropX": 51.8,
+      "cropY": 9.3,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "高橋 春翔",
+      "romaji": "Haruto.T",
+      "grade": "1年生",
+      "number": "16",
+      "previous": "FC DENOVA",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779370210.jpeg",
+      "cropX": 52.0,
+      "cropY": 10.7,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "羽田 成禮",
+      "romaji": "Hirari.H",
+      "grade": "1年生",
+      "number": "17",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779369787.jpeg",
+      "cropX": 50.3,
+      "cropY": 32.0,
+      "cropZoom": 1.08,
+      "cropTy": 2.0
+    },
+    {
+      "name": "山保 英士",
+      "romaji": "Eiji.Y",
+      "grade": "1年生",
+      "number": "18",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373748.jpeg",
+      "cropX": 50.6,
+      "cropY": 6.9,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "小浜 颯介",
+      "romaji": "Sousuke.K",
+      "grade": "1年生",
+      "number": "19",
+      "previous": "留萌港南合同チーム",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989503.jpeg",
+      "cropX": 49.8,
+      "cropY": 37.5,
+      "cropZoom": 1.08,
+      "cropTy": -3.5
+    },
+    {
+      "name": "阿部 旬吾",
+      "romaji": "Syungo.A",
+      "grade": "1年生",
+      "number": "20",
+      "previous": "アプリーレ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373274.jpeg",
+      "cropX": 50.7,
+      "cropY": 31.4,
+      "cropZoom": 1.08,
+      "cropTy": 2.6
+    },
+    {
+      "name": "阿部 圭吾",
+      "romaji": "Keigo.A",
+      "grade": "1年生",
+      "number": "21",
+      "previous": "アプリーレ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373383.jpeg",
+      "cropX": 51.9,
+      "cropY": 34.2,
+      "cropZoom": 1.08,
+      "cropTy": -0.2
+    },
+    {
+      "name": "浦重 奏牙",
+      "romaji": "Sogo.U",
+      "grade": "1年生",
+      "number": "22",
+      "previous": "FC.HERBONS",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373694.jpeg",
+      "cropX": 47.8,
+      "cropY": 12.2,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "東堂 良明",
+      "romaji": "Yoshiaki.T",
+      "grade": "3年生",
+      "number": "23",
+      "previous": "アンフィニ",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364630.jpeg",
+      "cropX": 49.7,
+      "cropY": 37.9,
+      "cropZoom": 1.08,
+      "cropTy": -3.9
+    },
+    {
+      "name": "碓井 月都",
+      "romaji": "Tsukito.U",
+      "grade": "3年生",
+      "number": "24",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364668.jpeg",
+      "cropX": 46.9,
+      "cropY": 33.7,
+      "cropZoom": 1.08,
+      "cropTy": 0.3
+    },
+    {
+      "name": "加藤 槙",
+      "romaji": "Shin.K",
+      "grade": "3年生",
+      "number": "25",
+      "previous": "sss",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364706.jpeg",
+      "cropX": 47.9,
+      "cropY": 38.4,
+      "cropZoom": 1.08,
+      "cropTy": -4.4
+    },
+    {
+      "name": "橋本 瑛",
+      "romaji": "Akira.H",
+      "grade": "3年生",
+      "number": "26",
+      "previous": "SC札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364728.jpeg",
+      "cropX": 47.2,
+      "cropY": 38.5,
+      "cropZoom": 1.08,
+      "cropTy": -4.5
+    },
+    {
+      "name": "坂本 智星",
+      "romaji": "Tomose.S",
+      "grade": "3年生",
+      "number": "27",
+      "previous": "アプリーレ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364760.jpeg",
+      "cropX": 47.4,
+      "cropY": 43.9,
+      "cropZoom": 1.08,
+      "cropTy": -9.9
+    },
+    {
+      "name": "荒木 天翔",
+      "romaji": "Kakeru.A",
+      "grade": "3年生",
+      "number": "28",
+      "previous": "sss",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364840.jpeg",
+      "cropX": 47.7,
+      "cropY": 35.5,
+      "cropZoom": 1.08,
+      "cropTy": -1.5
+    },
+    {
+      "name": "小原 絢斗",
+      "romaji": "Kento.O",
+      "grade": "3年生",
+      "number": "29",
+      "previous": "sss",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364866.jpeg",
+      "cropX": 46.3,
+      "cropY": 40.2,
+      "cropZoom": 1.08,
+      "cropTy": -6.2
+    },
+    {
+      "name": "溝江 星空",
+      "romaji": "Seia.M",
+      "grade": "3年生",
+      "number": "31",
+      "previous": "アンフィニ",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364914.jpeg",
+      "cropX": 49.6,
+      "cropY": 41.6,
+      "cropZoom": 1.08,
+      "cropTy": -7.6
+    },
+    {
+      "name": "伊藤 蒼蓮",
+      "romaji": "Seren.I",
+      "grade": "3年生",
+      "number": "32",
+      "previous": "BNFC",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364937.jpeg",
+      "cropX": 49.6,
+      "cropY": 45.0,
+      "cropZoom": 1.08,
+      "cropTy": -10.0
+    },
+    {
+      "name": "国安 諒真",
+      "romaji": "Ryoma.K",
+      "grade": "3年生",
+      "number": "33",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364962.jpeg",
+      "cropX": 47.7,
+      "cropY": 38.8,
+      "cropZoom": 1.08,
+      "cropTy": -4.8
+    },
+    {
+      "name": "山中 敦喜",
+      "romaji": "Atsuki.Y",
+      "grade": "3年生",
+      "number": "34",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364987.jpeg",
+      "cropX": 47.6,
+      "cropY": 41.8,
+      "cropZoom": 1.08,
+      "cropTy": -7.8
+    },
+    {
+      "name": "宮崎 優宇",
+      "romaji": "Yuu.M",
+      "grade": "3年生",
+      "number": "35",
+      "previous": "アンフィニ",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365023.jpeg",
+      "cropX": 49.8,
+      "cropY": 41.5,
+      "cropZoom": 1.08,
+      "cropTy": -7.5
+    },
+    {
+      "name": "梶原 碧",
+      "romaji": "Aoi.K",
+      "grade": "3年生",
+      "number": "37",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365125.jpeg",
+      "cropX": 46.4,
+      "cropY": 34.4,
+      "cropZoom": 1.08,
+      "cropTy": -0.4
+    },
+    {
+      "name": "太田 來穏",
+      "romaji": "Reon.O",
+      "grade": "3年生",
+      "number": "38",
+      "previous": "ベアフット",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365156.jpeg",
+      "cropX": 51.6,
+      "cropY": 37.9,
+      "cropZoom": 1.08,
+      "cropTy": -3.9
+    },
+    {
+      "name": "平野 壮琉",
+      "romaji": "Takeru.H",
+      "grade": "1年生",
+      "number": "39",
+      "previous": "DOHTO",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373574.jpeg",
+      "cropX": 50.3,
+      "cropY": 8.3,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "加藤 遼馬",
+      "romaji": "Ryoma.K",
+      "grade": "3年生",
+      "number": "40",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365183.jpeg",
+      "cropX": 49.1,
+      "cropY": 37.1,
+      "cropZoom": 1.08,
+      "cropTy": -3.1
+    },
+    {
+      "name": "松浦 龍雅",
+      "romaji": "Ryuga.M",
+      "grade": "3年生",
+      "number": "41",
+      "previous": "コンサドーレ釧路",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365210.jpeg",
+      "cropX": 49.1,
+      "cropY": 42.7,
+      "cropZoom": 1.08,
+      "cropTy": -8.7
+    },
+    {
+      "name": "近藤 大翔",
+      "romaji": "Hiroto.K",
+      "grade": "3年生",
+      "number": "42",
+      "previous": "倶知安中",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365234.jpeg",
+      "cropX": 45.9,
+      "cropY": 39.4,
+      "cropZoom": 1.08,
+      "cropTy": -5.4
+    },
+    {
+      "name": "市島 快隼",
+      "romaji": "Kaito.I",
+      "grade": "3年生",
+      "number": "43",
+      "previous": "sssサクセス",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365258.jpeg",
+      "cropX": 49.6,
+      "cropY": 36.7,
+      "cropZoom": 1.08,
+      "cropTy": -2.7
+    },
+    {
+      "name": "関原 樹",
+      "romaji": "Itsuki.S",
+      "grade": "3年生",
+      "number": "44",
+      "previous": "sssサクセス",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365304.jpeg",
+      "cropX": 49.3,
+      "cropY": 37.4,
+      "cropZoom": 1.08,
+      "cropTy": -3.4
+    },
+    {
+      "name": "相吉 幸哉",
+      "romaji": "Sachiya.A",
+      "grade": "3年生",
+      "number": "45",
+      "previous": "sssサクセス",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365349.jpeg",
+      "cropX": 51.3,
+      "cropY": 9.9,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "齋藤 獅音",
+      "romaji": "Shion.S",
+      "grade": "3年生",
+      "number": "46",
+      "previous": "アプリーレ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365389.jpeg",
+      "cropX": 49.6,
+      "cropY": 37.0,
+      "cropZoom": 1.08,
+      "cropTy": -3.0
+    },
+    {
+      "name": "笠原 瑛心",
+      "romaji": "Eishin.K",
+      "grade": "3年生",
+      "number": "47",
+      "previous": "プログレッソ十勝",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365414.jpeg",
+      "cropX": 49.0,
+      "cropY": 42.7,
+      "cropZoom": 1.08,
+      "cropTy": -8.7
+    },
+    {
+      "name": "高橋 虹輝",
+      "romaji": "Koki.T",
+      "grade": "3年生",
+      "number": "48",
+      "previous": "アプリーレ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365441.jpeg",
+      "cropX": 47.4,
+      "cropY": 38.0,
+      "cropZoom": 1.08,
+      "cropTy": -4.0
+    },
+    {
+      "name": "森 勇颯",
+      "romaji": "Ibuki.M",
+      "grade": "3年生",
+      "number": "49",
+      "previous": "DENOVA",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365482.jpeg",
+      "cropX": 49.6,
+      "cropY": 38.0,
+      "cropZoom": 1.08,
+      "cropTy": -4.0
+    },
+    {
+      "name": "大西 風歌",
+      "romaji": "Futa.O",
+      "grade": "3年生",
+      "number": "50",
+      "previous": "DENOVA",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365513.jpeg",
+      "cropX": 47.4,
+      "cropY": 9.2,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "美濃 興希那",
+      "romaji": "Okina.M",
+      "grade": "2年生",
+      "number": "51",
+      "previous": "アンフィニ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364331.jpeg",
+      "cropX": 45.6,
+      "cropY": 37.5,
+      "cropZoom": 1.08,
+      "cropTy": -3.5
+    },
+    {
+      "name": "加賀谷 蓮",
+      "romaji": "Ren.K",
+      "grade": "2年生",
+      "number": "52",
+      "previous": "手稲東",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364611.jpeg",
+      "cropX": 46.1,
+      "cropY": 36.9,
+      "cropZoom": 1.08,
+      "cropTy": -2.9
+    },
+    {
+      "name": "棚橋 柚稀",
+      "romaji": "Yuzuki.T",
+      "grade": "2年生",
+      "number": "53",
+      "previous": "プログレッソ十勝",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364675.jpeg",
+      "cropX": 47.0,
+      "cropY": 35.4,
+      "cropZoom": 1.08,
+      "cropTy": -1.4
+    },
+    {
+      "name": "早坂 秋音",
+      "romaji": "Shuto.H",
+      "grade": "2年生",
+      "number": "54",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364700.jpeg",
+      "cropX": 48.8,
+      "cropY": 46.7,
+      "cropZoom": 1.08,
+      "cropTy": -10.0
+    },
+    {
+      "name": "中力 泰",
+      "romaji": "Tai.C",
+      "grade": "2年生",
+      "number": "55",
+      "previous": "泊SC",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364747.jpeg",
+      "cropX": 49.1,
+      "cropY": 40.3,
+      "cropZoom": 1.08,
+      "cropTy": -6.3
+    },
+    {
+      "name": "郷 翔真",
+      "romaji": "Shoma.G",
+      "grade": "2年生",
+      "number": "56",
+      "previous": "プログレッソ十勝",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364854.jpeg",
+      "cropX": 50.2,
+      "cropY": 11.9,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "笠井 悠登",
+      "romaji": "Haruto.K",
+      "grade": "2年生",
+      "number": "57",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364884.jpeg",
+      "cropX": 49.2,
+      "cropY": 37.5,
+      "cropZoom": 1.08,
+      "cropTy": -3.5
+    },
+    {
+      "name": "岡田 璃音",
+      "romaji": "Rion.O",
+      "grade": "2年生",
+      "number": "58",
+      "previous": "ベアフット北海道",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779364925.jpeg",
+      "cropX": 50.6,
+      "cropY": 33.7,
+      "cropZoom": 1.08,
+      "cropTy": 0.3
+    },
+    {
+      "name": "土門 興明",
+      "romaji": "Komei.D",
+      "grade": "2年生",
+      "number": "59",
+      "previous": "SC SAPPORO",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779450767.jpeg",
+      "cropX": 51.0,
+      "cropY": 40.5,
+      "cropZoom": 1.08,
+      "cropTy": -6.5
+    },
+    {
+      "name": "粕谷 大翔",
+      "romaji": "Daito.K",
+      "grade": "2年生",
+      "number": "60",
+      "previous": "FC  DENOVA",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365087.jpeg",
+      "cropX": 47.6,
+      "cropY": 45.6,
+      "cropZoom": 1.08,
+      "cropTy": -10.0
+    },
+    {
+      "name": "佐藤 森羅",
+      "romaji": "Sinra.S",
+      "grade": "2年生",
+      "number": "61",
+      "previous": "アプリーレ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365122.jpeg",
+      "cropX": 50.9,
+      "cropY": 37.7,
+      "cropZoom": 1.08,
+      "cropTy": -3.7
+    },
+    {
+      "name": "森田 雄心",
+      "romaji": "Yushin.M",
+      "grade": "2年生",
+      "number": "63",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365208.jpeg",
+      "cropX": 48.0,
+      "cropY": 11.2,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "高橋 慶次",
+      "romaji": "Keiji.T",
+      "grade": "2年生",
+      "number": "64",
+      "previous": "札幌ジュニア",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365253.jpeg",
+      "cropX": 50.9,
+      "cropY": 12.1,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "河合 虹希",
+      "romaji": "Nanaki.K",
+      "grade": "2年生",
+      "number": "65",
+      "previous": "sss",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365361.jpeg",
+      "cropX": 49.4,
+      "cropY": 40.3,
+      "cropZoom": 1.08,
+      "cropTy": -6.3
+    },
+    {
+      "name": "倉又 圭都",
+      "romaji": "Keito.K",
+      "grade": "2年生",
+      "number": "66",
+      "previous": "HKD",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365388.jpeg",
+      "cropX": 49.8,
+      "cropY": 37.2,
+      "cropZoom": 1.08,
+      "cropTy": -3.2
+    },
+    {
+      "name": "大月 虎之介",
+      "romaji": "Toranosuke.O",
+      "grade": "2年生",
+      "number": "67",
+      "previous": "札幌ジュニアFC",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365437.jpeg",
+      "cropX": 51.8,
+      "cropY": 35.7,
+      "cropZoom": 1.08,
+      "cropTy": -1.7
+    },
+    {
+      "name": "根本 輝",
+      "romaji": "Teru.N",
+      "grade": "2年生",
+      "number": "68",
+      "previous": "FC DENOVA",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365460.jpeg",
+      "cropX": 51.5,
+      "cropY": 11.2,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "珍田 洸希",
+      "romaji": "Kouki.C",
+      "grade": "2年生",
+      "number": "69",
+      "previous": "sss",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365495.jpeg",
+      "cropX": 48.4,
+      "cropY": 39.5,
+      "cropZoom": 1.08,
+      "cropTy": -5.5
+    },
+    {
+      "name": "織田 楓芽",
+      "romaji": "Fuga.O",
+      "grade": "2年生",
+      "number": "70",
+      "previous": "アプリーレ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365520.jpeg",
+      "cropX": 45.6,
+      "cropY": 36.8,
+      "cropZoom": 1.08,
+      "cropTy": -2.8
+    },
+    {
+      "name": "小野寺 瞬",
+      "romaji": "Shun.O",
+      "grade": "2年生",
+      "number": "71",
+      "previous": "FC DENOVA",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365544.jpeg",
+      "cropX": 51.8,
+      "cropY": 33.0,
+      "cropZoom": 1.08,
+      "cropTy": 1.0
     },
     {
       "name": "渡辺 慶人",
+      "romaji": "Keito.W",
       "grade": "2年生",
+      "number": "72",
+      "previous": "アプリーレ札幌",
       "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365574.jpeg",
+      "cropX": 51.5,
+      "cropY": 9.0,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "高橋 遼",
+      "romaji": "Ryo.T",
+      "grade": "2年生",
+      "number": "73",
+      "previous": "アンフィニ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365596.jpeg",
+      "cropX": 48.9,
+      "cropY": 42.6,
+      "cropZoom": 1.08,
+      "cropTy": -8.6
+    },
+    {
+      "name": "五十嵐 悠",
+      "romaji": "Yuu.I",
+      "grade": "2年生",
+      "number": "74",
+      "previous": "FC DENOVA",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365638.jpeg",
+      "cropX": 47.9,
+      "cropY": 37.9,
+      "cropZoom": 1.08,
+      "cropTy": -3.9
+    },
+    {
+      "name": "濱 晃太朗",
+      "romaji": "Koutaro.H",
+      "grade": "2年生",
+      "number": "75",
+      "previous": "FC-NORTE",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365665.jpeg",
       "cropX": 51.4,
-      "cropY": 26.7,
-      "cropZoom": 0.71
+      "cropY": 36.6,
+      "cropZoom": 1.08,
+      "cropTy": -2.6
+    },
+    {
+      "name": "菅原 悠陽",
+      "romaji": "Yuhi.S",
+      "grade": "3年生",
+      "number": "76",
+      "previous": "sss",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365545.jpeg",
+      "cropX": 46.3,
+      "cropY": 43.5,
+      "cropZoom": 1.08,
+      "cropTy": -9.5
+    },
+    {
+      "name": "山屋 亮磨",
+      "romaji": "Ryoma.Y",
+      "grade": "3年生",
+      "number": "77",
+      "previous": "アンフィニ",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365611.jpeg",
+      "cropX": 48.8,
+      "cropY": 31.4,
+      "cropZoom": 1.08,
+      "cropTy": 2.6
+    },
+    {
+      "name": "由良 樹",
+      "romaji": "Itsuki.Y",
+      "grade": "3年生",
+      "number": "78",
+      "previous": "アンフィニ",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365646.jpeg",
+      "cropX": 48.0,
+      "cropY": 31.9,
+      "cropZoom": 1.08,
+      "cropTy": 2.1
+    },
+    {
+      "name": "町田 祐太",
+      "romaji": "Yuta.M",
+      "grade": "3年生",
+      "number": "79",
+      "previous": "札幌大谷",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365673.jpeg",
+      "cropX": 50.2,
+      "cropY": 36.1,
+      "cropZoom": 1.08,
+      "cropTy": -2.1
+    },
+    {
+      "name": "植村 飛向",
+      "romaji": "Hinata.U",
+      "grade": "3年生",
+      "number": "80",
+      "previous": "アプリーレ",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365697.jpeg",
+      "cropX": 48.7,
+      "cropY": 39.6,
+      "cropZoom": 1.08,
+      "cropTy": -5.6
+    },
+    {
+      "name": "佐藤 翔馬",
+      "romaji": "Syoma.S",
+      "grade": "3年生",
+      "number": "81",
+      "previous": "ベアフット",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365717.jpeg",
+      "cropX": 51.5,
+      "cropY": 42.0,
+      "cropZoom": 1.08,
+      "cropTy": -8.0
+    },
+    {
+      "name": "藤木 仁平",
+      "romaji": "Jinpei.F",
+      "grade": "3年生",
+      "number": "82",
+      "previous": "NORTE",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365750.jpeg",
+      "cropX": 47.8,
+      "cropY": 33.5,
+      "cropZoom": 1.08,
+      "cropTy": 0.5
+    },
+    {
+      "name": "櫻岡 天晴",
+      "romaji": "Sora.S",
+      "grade": "2年生",
+      "number": "84",
+      "previous": "ベアフット北海道",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/1@p_1779365697.jpeg",
+      "cropX": 49.1,
+      "cropY": 33.8,
+      "cropZoom": 1.08,
+      "cropTy": 0.2
+    },
+    {
+      "name": "大川 優成",
+      "romaji": "Yusei.O",
+      "grade": "2年生",
+      "number": "85",
+      "previous": "AGGRE",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365719.jpeg",
+      "cropX": 49.6,
+      "cropY": 30.8,
+      "cropZoom": 1.08,
+      "cropTy": 3.2
+    },
+    {
+      "name": "美濃島 颯太",
+      "romaji": "Souta.M",
+      "grade": "2年生",
+      "number": "86",
+      "previous": "アプリーレ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365738.jpeg",
+      "cropX": 47.3,
+      "cropY": 33.7,
+      "cropZoom": 1.08,
+      "cropTy": 0.3
+    },
+    {
+      "name": "丸山 琉楓",
+      "romaji": "Ruka.M",
+      "grade": "2年生",
+      "number": "87",
+      "previous": "HERBONOS",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365770.jpeg",
+      "cropX": 47.4,
+      "cropY": 30.1,
+      "cropZoom": 1.08,
+      "cropTy": 3.9
+    },
+    {
+      "name": "志賀 斗威",
+      "romaji": "Toi.S",
+      "grade": "2年生",
+      "number": "88",
+      "previous": "ベアフット北海道",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365792.jpeg",
+      "cropX": 47.8,
+      "cropY": 33.5,
+      "cropZoom": 1.08,
+      "cropTy": 0.5
+    },
+    {
+      "name": "安達 俐仁",
+      "romaji": "Rihito.A",
+      "grade": "2年生",
+      "number": "89",
+      "previous": "アンフィニ札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365813.jpeg",
+      "cropX": 50.7,
+      "cropY": 11.9,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "粕谷 優大",
+      "romaji": "Yudai.K",
+      "grade": "2年生",
+      "number": "90",
+      "previous": "FC DENOVA",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365844.jpeg",
+      "cropX": 46.4,
+      "cropY": 33.1,
+      "cropZoom": 1.08,
+      "cropTy": 0.9
+    },
+    {
+      "name": "竹原 琉生",
+      "romaji": "Ryusei.T",
+      "grade": "2年生",
+      "number": "91",
+      "previous": "宮の丘",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/1@p_1779365867.jpeg",
+      "cropX": 48.7,
+      "cropY": 32.7,
+      "cropZoom": 1.08,
+      "cropTy": 1.3
+    },
+    {
+      "name": "高橋 琥央",
+      "romaji": "Koo.T",
+      "grade": "2年生",
+      "number": "92",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365892.jpeg",
+      "cropX": 49.0,
+      "cropY": 31.7,
+      "cropZoom": 1.08,
+      "cropTy": 2.3
+    },
+    {
+      "name": "戸田 陽基",
+      "romaji": "Haruki.T",
+      "grade": "2年生",
+      "number": "93",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365920.jpeg",
+      "cropX": 48.2,
+      "cropY": 30.8,
+      "cropZoom": 1.08,
+      "cropTy": 3.2
+    },
+    {
+      "name": "平 潤偉",
+      "romaji": "Rui.T",
+      "grade": "1年生",
+      "number": "96",
+      "previous": "FC DENOVA",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989523.jpeg",
+      "cropX": 49.0,
+      "cropY": 7.9,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "菅田 吏央",
+      "romaji": "Rio.S",
+      "grade": "1年生",
+      "number": "97",
+      "previous": "SSSサクセス",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373598.jpeg",
+      "cropX": 50.9,
+      "cropY": 8.9,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "阿部 大輝",
+      "romaji": "Hiroki.A",
+      "grade": "1年生",
+      "number": "98",
+      "previous": "SSSサクセス",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373818.jpeg",
+      "cropX": 46.5,
+      "cropY": 11.4,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "進藤 暖真",
+      "romaji": "Haruma.S",
+      "grade": "1年生",
+      "number": "99",
+      "previous": "FIBRA",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989562.jpeg",
+      "cropX": 48.9,
+      "cropY": 44.2,
+      "cropZoom": 1.08,
+      "cropTy": -10.0
+    },
+    {
+      "name": "藤田 陸斗",
+      "romaji": "Rikuto.F",
+      "grade": "1年生",
+      "number": "100",
+      "previous": "SSS札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373469.jpeg",
+      "cropX": 49.9,
+      "cropY": 12.4,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "菊池 凌牙",
+      "romaji": "Ryouga.K",
+      "grade": "1年生",
+      "number": "101",
+      "previous": "NORTE",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373178.jpeg",
+      "cropX": 49.2,
+      "cropY": 30.1,
+      "cropZoom": 1.08,
+      "cropTy": 3.9
+    },
+    {
+      "name": "酒谷 元崇",
+      "romaji": "Yoshitaka.S",
+      "grade": "1年生",
+      "number": "102",
+      "previous": "SSS札幌",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373778.jpeg",
+      "cropX": 51.7,
+      "cropY": 36.7,
+      "cropZoom": 1.08,
+      "cropTy": -2.7
+    },
+    {
+      "name": "村上 晴基",
+      "romaji": "Haruki.M",
+      "grade": "1年生",
+      "number": "103",
+      "previous": "石狩FC",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373629.jpeg",
+      "cropX": 48.0,
+      "cropY": 34.9,
+      "cropZoom": 1.08,
+      "cropTy": -0.9
+    },
+    {
+      "name": "村尾 慶翔",
+      "romaji": "Keito.M",
+      "grade": "1年生",
+      "number": "104",
+      "previous": "ベアフット北海道",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373361.jpeg",
+      "cropX": 52.3,
+      "cropY": 10.9,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "堀川 泰雅",
+      "romaji": "Taiga.H",
+      "grade": "1年生",
+      "number": "105",
+      "previous": "東栄中学校",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779374039.jpeg",
+      "cropX": 50.9,
+      "cropY": 11.7,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "三熊 虎大郎",
+      "romaji": "Kotaro.M",
+      "grade": "1年生",
+      "number": "106",
+      "previous": "啓明中",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779835814.jpeg",
+      "cropX": 47.1,
+      "cropY": 43.3,
+      "cropZoom": 1.08,
+      "cropTy": -9.3
+    },
+    {
+      "name": "古谷 太一",
+      "romaji": "Taichi.F",
+      "grade": "1年生",
+      "number": "107",
+      "previous": "One Eight FC",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779835837.jpeg",
+      "cropX": 46.5,
+      "cropY": 43.9,
+      "cropZoom": 1.08,
+      "cropTy": -9.9
+    },
+    {
+      "name": "上田 蒼空",
+      "romaji": "Sora.U",
+      "grade": "1年生",
+      "number": "109",
+      "previous": "伏見中",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989645.jpeg",
+      "cropX": 50.5,
+      "cropY": 39.1,
+      "cropZoom": 1.08,
+      "cropTy": -5.1
+    },
+    {
+      "name": "干場 琉聖",
+      "romaji": "Ryusei.H",
+      "grade": "1年生",
+      "number": "110",
+      "previous": "藤野中",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1780989615.jpeg",
+      "cropX": 47.2,
+      "cropY": 39.8,
+      "cropZoom": 1.08,
+      "cropTy": -5.8
+    },
+    {
+      "name": "中井 乙寧",
+      "romaji": "Otone.N",
+      "grade": "3年生",
+      "number": "",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779366258.jpeg",
+      "cropX": 48.8,
+      "cropY": 44.9,
+      "cropZoom": 1.08,
+      "cropTy": -10.0
+    },
+    {
+      "name": "今 維希",
+      "romaji": "Itsuki.K",
+      "grade": "1年生",
+      "number": "",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373219.jpeg",
+      "cropX": 49.6,
+      "cropY": 7.8,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "佐藤 諒弥",
+      "romaji": "Ryoya.S",
+      "grade": "3年生",
+      "number": "",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365867.jpeg",
+      "cropX": 50.3,
+      "cropY": 37.7,
+      "cropZoom": 1.08,
+      "cropTy": -3.7
+    },
+    {
+      "name": "佐藤 颯雅",
+      "romaji": "Fuga.S",
+      "grade": "3年生",
+      "number": "",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/1@p_1779365770.jpeg",
+      "cropX": 49.9,
+      "cropY": 38.8,
+      "cropZoom": 1.08,
+      "cropTy": -4.8
+    },
+    {
+      "name": "川岸 蒼空",
+      "romaji": "Sora.K",
+      "grade": "1年生",
+      "number": "",
+      "previous": "One EightFC",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373546.jpeg",
+      "cropX": 46.6,
+      "cropY": 37.2,
+      "cropZoom": 1.08,
+      "cropTy": -3.2
+    },
+    {
+      "name": "樋原 美羽",
+      "romaji": "Mihane.H",
+      "grade": "2年生",
+      "number": "",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1784731172.jpeg",
+      "cropX": 50.3,
+      "cropY": 34.6,
+      "cropZoom": 1.08,
+      "cropTy": -0.6
+    },
+    {
+      "name": "由良 栞",
+      "romaji": "Shiori.Y",
+      "grade": "1年生",
+      "number": "",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779450726.jpeg",
+      "cropX": 49.3,
+      "cropY": 31.6,
+      "cropZoom": 1.08,
+      "cropTy": 2.4
+    },
+    {
+      "name": "箕浦 詩桜",
+      "romaji": "Shio.M",
+      "grade": "2年生",
+      "number": "",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779366111.jpeg",
+      "cropX": 49.7,
+      "cropY": 9.0,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
+    },
+    {
+      "name": "菅原 優空",
+      "romaji": "Yuua.S",
+      "grade": "1年生",
+      "number": "",
+      "previous": "FC DENOVA",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779373327.jpeg",
+      "cropX": 49.3,
+      "cropY": 35.7,
+      "cropZoom": 1.08,
+      "cropTy": -1.7
+    },
+    {
+      "name": "長畑 朱樂",
+      "romaji": "Shura.N",
+      "grade": "2年生",
+      "number": "",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365180.jpeg",
+      "cropX": 50.1,
+      "cropY": 38.5,
+      "cropZoom": 1.08,
+      "cropTy": -4.5
+    },
+    {
+      "name": "高野 佑太",
+      "romaji": "Yuta.T",
+      "grade": "2年生",
+      "number": "",
+      "previous": "",
+      "image": "https://www.footballnavi.jp/sapporo_tokai/_data/player/p_1779365980.jpeg",
+      "cropX": 51.6,
+      "cropY": 12.0,
+      "cropZoom": 1.0,
+      "cropTy": 0.0
     }
   ]
 }

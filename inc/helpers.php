@@ -43,9 +43,111 @@ function tokai_render_instagram_feed() {
     echo '</div>';
 }
 
+/**
+ * 年度ごとの News ナビ構成。
+ * チーム数は学年で変わるため、年単位で蓄積する（新しい年を先頭に追加）。
+ *
+ * @return array<int, list<array{slug:string,label:string}>>
+ */
+function tokai_news_season_nav_config() {
+    $config = [
+        2026 => [
+            ['slug' => 'oshirase', 'label' => 'お知らせ'],
+            ['slug' => 'top', 'label' => 'TOP'],
+            ['slug' => '2nd', 'label' => '2nd'],
+            ['slug' => '3rd', 'label' => '3rd'],
+            ['slug' => '4th', 'label' => '4th'],
+        ],
+    ];
+
+    /**
+     * 年度ナビ構成をフィルタで拡張可能
+     */
+    return apply_filters('tokai_news_season_nav_config', $config);
+}
+
+/**
+ * News ナビに登録されている年度一覧（新しい順）
+ */
 function tokai_news_years() {
-    $current = (int) date('Y');
-    return range($current, $current - 2);
+    $years = array_map('intval', array_keys(tokai_news_season_nav_config()));
+    rsort($years, SORT_NUMERIC);
+    return $years ?: [2026];
+}
+
+/**
+ * いま表示する「当年」シーズン
+ */
+function tokai_news_current_season_year() {
+    $years = tokai_news_years();
+    $now = (int) date('Y');
+    if (in_array($now, $years, true)) {
+        return $now;
+    }
+    return (int) $years[0];
+}
+
+/**
+ * 指定年のナビ項目
+ *
+ * @return list<array{slug:string,label:string}>
+ */
+function tokai_news_season_nav_items($year) {
+    $config = tokai_news_season_nav_config();
+    $year = (int) $year;
+    return isset($config[$year]) && is_array($config[$year]) ? $config[$year] : [];
+}
+
+/**
+ * News サブメニュー（当年常時表示＋過去年アコーディオン）を出力
+ */
+function tokai_render_news_submenu() {
+    $current_year = tokai_news_current_season_year();
+    $years = tokai_news_years();
+    $current_items = tokai_news_season_nav_items($current_year);
+    $past_years = array_values(array_filter($years, static function ($y) use ($current_year) {
+        return (int) $y < $current_year;
+    }));
+    ?>
+    <div class="header__submenu">
+      <p class="header__submenu-year-label"><?php echo esc_html($current_year); ?>年</p>
+      <?php foreach ($current_items as $item) : ?>
+        <a href="<?php echo esc_url(tokai_page_url('news', ['year' => $current_year, 'cat' => $item['slug']])); ?>">
+          <?php echo esc_html($item['label']); ?>
+        </a>
+      <?php endforeach; ?>
+
+      <?php if (!empty($past_years)) : ?>
+        <span class="header__submenu-divider" aria-hidden="true"></span>
+        <?php foreach ($past_years as $year) :
+            $items = tokai_news_season_nav_items($year);
+            if (empty($items)) {
+                continue;
+            }
+            $panel_id = 'news-year-panel-' . $year;
+            ?>
+          <div class="header__submenu-year-group">
+            <button
+              type="button"
+              class="header__submenu-year"
+              aria-expanded="false"
+              aria-controls="<?php echo esc_attr($panel_id); ?>"
+            >
+              <span><?php echo esc_html($year); ?></span>
+              <span class="header__submenu-year-mark" aria-hidden="true">＞</span>
+            </button>
+            <div class="header__submenu-year-panel" id="<?php echo esc_attr($panel_id); ?>" hidden>
+              <?php foreach ($items as $item) : ?>
+                <a href="<?php echo esc_url(tokai_page_url('news', ['year' => $year, 'cat' => $item['slug']])); ?>">
+                  <?php echo esc_html($item['label']); ?>
+                </a>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      <?php endif; ?>
+    </div>
+    <?php
 }
 
 /**
@@ -65,6 +167,20 @@ function tokai_sponsor_logos() {
 }
 
 /**
+ * アプリ誘導CTA（スポンサー帯の上などで共通利用）
+ */
+function tokai_render_app_cta() {
+    ?>
+    <aside class="app-cta" aria-label="公式アプリ">
+      <p class="app-cta__micro">＼無料アプリで速報をチェック／</p>
+      <a href="<?php echo esc_url(tokai_page_url('application')); ?>" class="app-cta__button">
+        TOKAIアプリの詳細はこちら<span class="app-cta__arrow" aria-hidden="true">→</span>
+      </a>
+    </aside>
+    <?php
+}
+
+/**
  * 記事下などに表示するスポンサーロゴ帯
  */
 function tokai_render_sponsor_strip() {
@@ -73,6 +189,7 @@ function tokai_render_sponsor_strip() {
         return;
     }
     ?>
+    <?php tokai_render_app_cta(); ?>
     <aside class="article-sponsors" aria-label="スポンサー">
       <p class="article-sponsors__heading">
         <span class="article-sponsors__en">SPONSORS</span>

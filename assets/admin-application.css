@@ -1,0 +1,33 @@
+.tokai-app-panel {
+  background: #fff;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+
+.tokai-app-panel h2 {
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dcdcde;
+  font-size: 16px;
+}
+
+.tokai-app-feature-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 280px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .tokai-app-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tokai-app-feature-fields .regular-text,
+.tokai-app-feature-fields .large-text {
+  width: 100%;
+  max-width: 640px;
+}

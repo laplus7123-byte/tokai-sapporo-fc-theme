@@ -74,7 +74,7 @@ function tokai_news_meta_box_render($post) {
 
     $current_year = (int) date('Y');
     $season_options = ['' => '（未設定 / 投稿日を使用）'];
-    for ($y = $current_year + 1; $y >= 2022; $y--) {
+    for ($y = $current_year + 1; $y >= 2026; $y--) {
         $season_options[(string) $y] = $y . 'シーズン';
     }
     ?>

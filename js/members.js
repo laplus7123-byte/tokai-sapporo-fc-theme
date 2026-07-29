@@ -32,19 +32,58 @@
     return div.innerHTML;
   }
 
+  function numberSortKey(player) {
+    const raw = String(player.number || '').replace(/\D+/g, '');
+    if (raw) return [0, Number(raw), player.name || ''];
+    return [1, 9999, player.name || ''];
+  }
+
+  function sortByNumber(players) {
+    return [...players].sort((a, b) => {
+      const ka = numberSortKey(a);
+      const kb = numberSortKey(b);
+      if (ka[0] !== kb[0]) return ka[0] - kb[0];
+      if (ka[1] !== kb[1]) return ka[1] - kb[1];
+      return String(ka[2]).localeCompare(String(kb[2]), 'ja');
+    });
+  }
+
+  function cropStyle(member) {
+    if (
+      member.cropX == null &&
+      member.cropY == null &&
+      member.cropZoom == null &&
+      member.cropTy == null
+    ) {
+      return '';
+    }
+    const x = member.cropX != null ? Number(member.cropX) : 50;
+    const y = member.cropY != null ? Number(member.cropY) : 34;
+    const z = member.cropZoom != null ? Number(member.cropZoom) : 1.08;
+    const ty = member.cropTy != null ? Number(member.cropTy) : 0;
+    return ` style="--crop-x: ${x}%; --crop-y: ${y}%; --crop-zoom: ${z}; --crop-ty: ${ty};"`;
+  }
+
   function renderCard(member, subtitleKey) {
     const subtitle = member[subtitleKey] || '';
     const image = member.image || '';
+    const number = member.number || '';
+    const romaji = member.romaji || '';
+    const previous = member.previous || '';
     const imageHtml = image
-      ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(member.name)}" loading="lazy">`
+      ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(member.name)}" loading="lazy"${cropStyle(member)}>`
       : '<span class="member-card__placeholder" aria-hidden="true"></span>';
+
+    const overlayText = [number, romaji].filter(Boolean).join(' ');
 
     return `
       <div class="member-card">
         <div class="member-card__photo">
           ${imageHtml}
+          ${overlayText ? `<div class="member-card__photo-shade"><span class="member-card__photo-label">${escapeHtml(overlayText)}</span></div>` : ''}
         </div>
         <p class="member-card__name">${escapeHtml(member.name)}</p>
+        ${previous ? `<div class="member-card__meta"><p class="member-card__meta-item"><span>前所属</span>${escapeHtml(previous)}</p></div>` : ''}
         ${subtitle ? `<p class="member-card__position">${escapeHtml(subtitle)}</p>` : ''}
       </div>
     `;
@@ -82,7 +121,7 @@
     let html = renderNav();
 
     for (const grade of GRADE_ORDER) {
-      const players = (normalized.players || []).filter((p) => p.grade === grade);
+      const players = sortByNumber((normalized.players || []).filter((p) => p.grade === grade));
       if (players.length) {
         const id = `members-grade-${grade.charAt(0)}`;
         html += renderSection(grade, players, '', id);

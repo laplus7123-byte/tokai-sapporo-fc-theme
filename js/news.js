@@ -19,7 +19,7 @@
       id: 2,
       slug: 'championship-tomakomai',
       title: { rendered: '選手権全道大会　東海 vs 苫小牧中央' },
-      date: '2025-10-17T14:00:00',
+      date: '2026-04-12T14:00:00',
       content: { rendered: '<p>激戦の末、勝利を収めました。</p>' },
       categories: [{ slug: 'top', name: 'TOP' }],
       meta: {

@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('TOKAI_THEME_VERSION', '1.0.3');
+define('TOKAI_THEME_VERSION', '1.0.35');
 
 require_once get_template_directory() . '/inc/helpers.php';
 require_once get_template_directory() . '/inc/tokai-news-fields.php';
@@ -15,6 +15,12 @@ require_once get_template_directory() . '/inc/members.php';
 require_once get_template_directory() . '/inc/members-admin.php';
 require_once get_template_directory() . '/inc/instagram-import.php';
 require_once get_template_directory() . '/inc/instagram-import-admin.php';
+require_once get_template_directory() . '/inc/hero-fv.php';
+require_once get_template_directory() . '/inc/hero-fv-admin.php';
+require_once get_template_directory() . '/inc/application-content.php';
+require_once get_template_directory() . '/inc/application-admin.php';
+require_once get_template_directory() . '/inc/match-gallery.php';
+require_once get_template_directory() . '/inc/media-folders.php';
 
 function tokai_theme_setup() {
     add_theme_support('title-tag');
@@ -117,13 +123,24 @@ function tokai_customize_register($wp_customize) {
         'type'    => 'email',
     ]);
 
+    $wp_customize->add_setting('tokai_timetree_calendar_id', [
+        'default'           => 'tokaisapporo',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('tokai_timetree_calendar_id', [
+        'label'       => 'TimeTree 公開カレンダー ID',
+        'description' => '公開カレンダーURLの末尾（例: tokaisapporo）。https://timetreeapp.com/public_calendars/〇〇',
+        'section'     => 'tokai_settings',
+        'type'        => 'text',
+    ]);
+
     $wp_customize->add_setting('tokai_google_calendar_id', [
-        'default'           => 'YOUR_CALENDAR_ID',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('tokai_google_calendar_id', [
-        'label'       => 'Googleカレンダー ID',
-        'description' => '例: abc123@group.calendar.google.com',
+        'label'       => 'Googleカレンダー ID（予備）',
+        'description' => 'TimeTree未設定時のみ使用。例: abc123@group.calendar.google.com',
         'section'     => 'tokai_settings',
         'type'        => 'text',
     ]);
@@ -166,19 +183,44 @@ function tokai_get_contact_email() {
     return $email ?: get_option('admin_email');
 }
 
+function tokai_get_timetree_calendar_id() {
+    $id = trim((string) get_theme_mod('tokai_timetree_calendar_id', 'tokaisapporo'));
+    $id = preg_replace('/[^A-Za-z0-9_-]/', '', $id);
+    return $id ?: 'tokaisapporo';
+}
+
+function tokai_get_timetree_embed_url() {
+    $id = tokai_get_timetree_calendar_id();
+    return 'https://timetreeapp.com/public_calendars/' . rawurlencode($id) . '/embed';
+}
+
+function tokai_get_timetree_open_url() {
+    $id = tokai_get_timetree_calendar_id();
+    return 'https://timetreeapp.com/public_calendars/' . rawurlencode($id);
+}
+
 function tokai_get_calendar_embed_url() {
-    $calendar_id = get_theme_mod('tokai_google_calendar_id', 'YOUR_CALENDAR_ID');
-    $params      = [
-        'src'             => $calendar_id,
-        'ctz'             => 'Asia/Tokyo',
-        'mode'            => 'MONTH',
-        'showTitle'       => '0',
-        'showNav'         => '1',
-        'showPrint'       => '0',
-        'showTabs'        => '1',
-        'showCalendars'   => '0',
-        'showTz'          => '0',
-        'bgcolor'         => '%230A0A0A',
+    $timetree_id = tokai_get_timetree_calendar_id();
+    if ($timetree_id !== '') {
+        return tokai_get_timetree_embed_url();
+    }
+
+    $calendar_id = get_theme_mod('tokai_google_calendar_id', '');
+    if ($calendar_id === '' || $calendar_id === 'YOUR_CALENDAR_ID') {
+        return tokai_get_timetree_embed_url();
+    }
+
+    $params = [
+        'src'           => $calendar_id,
+        'ctz'           => 'Asia/Tokyo',
+        'mode'          => 'MONTH',
+        'showTitle'     => '0',
+        'showNav'       => '1',
+        'showPrint'     => '0',
+        'showTabs'      => '1',
+        'showCalendars' => '0',
+        'showTz'        => '0',
+        'bgcolor'       => '%230A0A0A',
     ];
 
     return 'https://calendar.google.com/calendar/embed?' . http_build_query($params);
@@ -211,8 +253,10 @@ function tokai_create_page_if_missing($title, $slug, $template = '') {
 function tokai_theme_activation() {
     $pages = [
         ['title' => 'News', 'slug' => 'news', 'template' => 'page-templates/page-news.php'],
+        ['title' => 'Gallery', 'slug' => 'gallery', 'template' => 'page-templates/page-gallery.php'],
         ['title' => 'Members', 'slug' => 'members', 'template' => 'page-templates/page-members.php'],
         ['title' => 'Schedule', 'slug' => 'schedule', 'template' => 'page-templates/page-schedule.php'],
+        ['title' => 'Application', 'slug' => 'application', 'template' => 'page-templates/page-application.php'],
         ['title' => 'Sponsor', 'slug' => 'sponsor', 'template' => 'page-templates/page-sponsor.php'],
         ['title' => 'Contact', 'slug' => 'contact', 'template' => 'page-templates/page-contact.php'],
         ['title' => 'Thanks', 'slug' => 'thanks', 'template' => 'page-templates/page-thanks.php'],
@@ -226,6 +270,28 @@ function tokai_theme_activation() {
     flush_rewrite_rules();
 }
 add_action('after_switch_theme', 'tokai_theme_activation');
+
+/**
+ * 既存サイトでも Gallery ページを自動作成
+ */
+add_action('admin_init', function () {
+    if (get_option('tokai_gallery_page_created') === '1') {
+        return;
+    }
+    tokai_create_page_if_missing('Gallery', 'gallery', 'page-templates/page-gallery.php');
+    update_option('tokai_gallery_page_created', '1', false);
+});
+
+/**
+ * 既存サイトでも Application ページを自動作成
+ */
+add_action('admin_init', function () {
+    if (get_option('tokai_application_page_created') === '1') {
+        return;
+    }
+    tokai_create_page_if_missing('Application', 'application', 'page-templates/page-application.php');
+    update_option('tokai_application_page_created', '1', false);
+});
 
 function tokai_document_title($title) {
     if (is_front_page()) {

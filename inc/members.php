@@ -99,6 +99,54 @@ function tokai_get_members_raw() {
         return tokai_repair_members_from_default();
     }
 
+    $players = $data['players'] ?? [];
+    $with_number = 0;
+    foreach ($players as $player) {
+        if (!empty($player['number'])) {
+            $with_number++;
+        }
+    }
+
+    // 背番号がほぼ無い場合は Football Navi 初期データから補完して保存
+    if ($player_count >= 10 && $with_number < max(5, (int) floor($player_count * 0.3))) {
+        $enriched = tokai_enrich_players_with_default_details($players);
+        $data['players'] = $enriched;
+        $data = tokai_prepare_members_for_storage($data);
+        update_option(TOKAI_MEMBERS_OPTION, $data, false);
+        return $data;
+    }
+
+    // ローマ字・前所属だけ欠けている場合も補完
+    $missing_detail = 0;
+    foreach ($players as $player) {
+        if (($player['romaji'] ?? '') === '' || ($player['previous'] ?? '') === '') {
+            $missing_detail++;
+        }
+    }
+    if ($player_count >= 10 && $missing_detail > (int) floor($player_count * 0.5)) {
+        $enriched = tokai_enrich_players_with_default_details($players);
+        $data['players'] = $enriched;
+        $data = tokai_prepare_members_for_storage($data);
+        update_option(TOKAI_MEMBERS_OPTION, $data, false);
+        return $data;
+    }
+
+    // 顔位置クロップが無い場合は初期JSONから補完
+    $missing_crop = 0;
+    foreach ($players as $player) {
+        if (!isset($player['cropTy'])) {
+            $missing_crop++;
+        }
+    }
+    if ($player_count >= 10 && $missing_crop > (int) floor($player_count * 0.5)) {
+        $enriched = tokai_enrich_players_with_default_details($players);
+        $data['players'] = $enriched;
+        $data = tokai_prepare_members_for_storage($data);
+        update_option(TOKAI_MEMBERS_OPTION, $data, false);
+        return $data;
+    }
+
+    $data['players'] = tokai_sort_players_by_number($players);
     return $data;
 }
 
@@ -120,6 +168,111 @@ function tokai_repair_members_from_default() {
     return $stored;
 }
 
+function tokai_player_number_sort_key($player) {
+    $number = preg_replace('/\D+/', '', (string) ($player['number'] ?? ''));
+    if ($number !== '') {
+        return [(int) $number, $player['name'] ?? ''];
+    }
+    return [9999, $player['name'] ?? ''];
+}
+
+function tokai_sort_players_by_number($players) {
+    $players = array_values($players);
+    usort($players, function ($a, $b) {
+        $ka = tokai_player_number_sort_key($a);
+        $kb = tokai_player_number_sort_key($b);
+        if ($ka[0] === $kb[0]) {
+            return strcmp((string) $ka[1], (string) $kb[1]);
+        }
+        return $ka[0] <=> $kb[0];
+    });
+    return $players;
+}
+
+/**
+ * 既存データに背番号・前所属・ローマ字が無い場合、初期JSONから補完する
+ */
+function tokai_enrich_players_with_default_details($players) {
+    $path = tokai_members_default_path();
+    if (!file_exists($path)) {
+        return $players;
+    }
+
+    $json = file_get_contents($path);
+    $data = json_decode($json, true);
+    if (!is_array($data) || empty($data['players'])) {
+        return $players;
+    }
+
+    $by_name = [];
+    foreach ($data['players'] as $player) {
+        $name = $player['name'] ?? '';
+        if ($name !== '') {
+            $by_name[$name] = $player;
+        }
+    }
+
+    $changed = false;
+    foreach ($players as &$player) {
+        $name = $player['name'] ?? '';
+        if ($name === '' || empty($by_name[$name])) {
+            continue;
+        }
+        $src = $by_name[$name];
+        foreach (['number', 'previous', 'romaji'] as $key) {
+            if (($player[$key] ?? '') === '' && ($src[$key] ?? '') !== '') {
+                $player[$key] = $src[$key];
+                $changed = true;
+            }
+        }
+        foreach (['cropX', 'cropY', 'cropZoom', 'cropTy'] as $key) {
+            if (!isset($player[$key]) && isset($src[$key])) {
+                $player[$key] = $src[$key];
+                $changed = true;
+            }
+        }
+    }
+    unset($player);
+
+    return $players;
+}
+
+/**
+ * 管理画面保存時に crop 値を既存データから引き継ぐ
+ */
+function tokai_members_preserve_crop_fields($payload) {
+    $existing = get_option(TOKAI_MEMBERS_OPTION, null);
+    if (!is_array($existing)) {
+        return $payload;
+    }
+
+    $by_name = [];
+    foreach (array_merge($existing['players'] ?? [], $existing['staff'] ?? []) as $row) {
+        $name = $row['name'] ?? '';
+        if ($name !== '') {
+            $by_name[$name] = tokai_sanitize_member_crop_fields($row);
+        }
+    }
+
+    foreach (['players', 'staff'] as $group) {
+        if (empty($payload[$group]) || !is_array($payload[$group])) {
+            continue;
+        }
+        foreach ($payload[$group] as &$row) {
+            $name = $row['name'] ?? '';
+            if ($name === '' || empty($by_name[$name])) {
+                continue;
+            }
+            if (!isset($row['cropTy'])) {
+                $row = array_merge($row, $by_name[$name]);
+            }
+        }
+        unset($row);
+    }
+
+    return $payload;
+}
+
 function tokai_resolve_member_image_url($member) {
     if (!empty($member['image_id'])) {
         $url = wp_get_attachment_image_url((int) $member['image_id'], 'large');
@@ -135,22 +288,72 @@ function tokai_resolve_member_image_url($member) {
     return '';
 }
 
+function tokai_member_crop_style_attr($member) {
+    $has_crop = isset($member['cropX']) || isset($member['cropY']) || isset($member['cropZoom']) || isset($member['cropTy']);
+    if (!$has_crop) {
+        return '';
+    }
+
+    $x  = isset($member['cropX']) ? (float) $member['cropX'] : 50.0;
+    $y  = isset($member['cropY']) ? (float) $member['cropY'] : 34.0;
+    $z  = isset($member['cropZoom']) ? (float) $member['cropZoom'] : 1.08;
+    $ty = isset($member['cropTy']) ? (float) $member['cropTy'] : 0.0;
+
+    return sprintf(
+        '--crop-x: %.1f%%; --crop-y: %.1f%%; --crop-zoom: %.2f; --crop-ty: %.1f;',
+        $x,
+        $y,
+        $z,
+        $ty
+    );
+}
+
+function tokai_sanitize_member_crop_fields($member) {
+    $out = [];
+    foreach (['cropX', 'cropY', 'cropZoom', 'cropTy'] as $key) {
+        if (!isset($member[$key]) || $member[$key] === '' || $member[$key] === null) {
+            continue;
+        }
+        $out[$key] = round((float) $member[$key], 2);
+    }
+    return $out;
+}
+
 function tokai_render_member_card($member, $subtitle_key = '') {
     $subtitle = $subtitle_key ? ($member[$subtitle_key] ?? '') : '';
     $image    = tokai_resolve_member_image_url($member);
     $name     = $member['name'] ?? '';
+    $number   = $member['number'] ?? '';
+    $romaji   = $member['romaji'] ?? '';
+    $previous = $member['previous'] ?? '';
+    $crop_style = tokai_member_crop_style_attr($member);
+
+    $overlay_parts = array_filter([$number, $romaji], function ($v) {
+        return $v !== '' && $v !== null;
+    });
+    $overlay_text = implode(' ', $overlay_parts);
 
     ob_start();
     ?>
     <div class="member-card">
       <div class="member-card__photo">
         <?php if ($image) : ?>
-          <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($name); ?>" loading="lazy">
+          <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($name); ?>" loading="lazy"<?php echo $crop_style !== '' ? ' style="' . esc_attr($crop_style) . '"' : ''; ?>>
         <?php else : ?>
           <span class="member-card__placeholder" aria-hidden="true"></span>
         <?php endif; ?>
+        <?php if ($overlay_text !== '') : ?>
+          <div class="member-card__photo-shade">
+            <span class="member-card__photo-label"><?php echo esc_html($overlay_text); ?></span>
+          </div>
+        <?php endif; ?>
       </div>
       <p class="member-card__name"><?php echo esc_html($name); ?></p>
+      <?php if ($previous) : ?>
+        <div class="member-card__meta">
+          <p class="member-card__meta-item"><span>前所属</span><?php echo esc_html($previous); ?></p>
+        </div>
+      <?php endif; ?>
       <?php if ($subtitle) : ?>
         <p class="member-card__position"><?php echo esc_html($subtitle); ?></p>
       <?php endif; ?>
@@ -176,6 +379,7 @@ function tokai_render_members_html($data = null) {
         $players = array_values(array_filter($data['players'] ?? [], function ($player) use ($grade) {
             return ($player['grade'] ?? '') === $grade;
         }));
+        $players = tokai_sort_players_by_number($players);
 
         if (empty($players)) {
             continue;
@@ -230,13 +434,22 @@ function tokai_prepare_members_for_storage($data) {
             $grade = '3年生';
         }
 
-        $players[] = [
+        $number = sanitize_text_field((string) ($player['number'] ?? ''));
+        $number = preg_replace('/\D+/', '', $number) ?: '';
+
+        $row = [
             'name'     => $name,
+            'romaji'   => sanitize_text_field($player['romaji'] ?? ''),
             'grade'    => $grade,
+            'number'   => $number,
+            'previous' => sanitize_text_field($player['previous'] ?? ''),
             'image_id' => absint($player['image_id'] ?? 0),
             'image'    => esc_url_raw($player['image'] ?? ''),
         ];
+        $players[] = array_merge($row, tokai_sanitize_member_crop_fields($player));
     }
+
+    $players = tokai_sort_players_by_number($players);
 
     $staff = [];
     foreach ($data['staff'] ?? [] as $member) {
@@ -245,12 +458,13 @@ function tokai_prepare_members_for_storage($data) {
             continue;
         }
 
-        $staff[] = [
+        $row = [
             'name'     => $name,
             'role'     => sanitize_text_field($member['role'] ?? ''),
             'image_id' => absint($member['image_id'] ?? 0),
             'image'    => esc_url_raw($member['image'] ?? ''),
         ];
+        $staff[] = array_merge($row, tokai_sanitize_member_crop_fields($member));
     }
 
     return [
@@ -263,19 +477,26 @@ function tokai_get_members_public() {
     $raw = tokai_get_members_raw();
 
     $players = array_map(function ($player) {
-        return [
-            'name'  => $player['name'],
-            'grade' => $player['grade'],
-            'image' => tokai_resolve_member_image_url($player),
+        $row = [
+            'name'     => $player['name'],
+            'romaji'   => $player['romaji'] ?? '',
+            'grade'    => $player['grade'],
+            'number'   => $player['number'] ?? '',
+            'previous' => $player['previous'] ?? '',
+            'image'    => tokai_resolve_member_image_url($player),
         ];
+        return array_merge($row, tokai_sanitize_member_crop_fields($player));
     }, $raw['players'] ?? []);
 
+    $players = tokai_sort_players_by_number($players);
+
     $staff = array_map(function ($member) {
-        return [
+        $row = [
             'name'  => $member['name'],
             'role'  => $member['role'] ?? '',
             'image' => tokai_resolve_member_image_url($member),
         ];
+        return array_merge($row, tokai_sanitize_member_crop_fields($member));
     }, $raw['staff'] ?? []);
 
     return [
@@ -411,7 +632,10 @@ function tokai_import_member_images_to_media() {
 
         $updated['players'][] = [
             'name'     => $player['name'] ?? '',
+            'romaji'   => $player['romaji'] ?? '',
             'grade'    => $player['grade'] ?? '3年生',
+            'number'   => $player['number'] ?? '',
+            'previous' => $player['previous'] ?? '',
             'image_id' => $image_id,
             'image'    => $image_url,
         ];

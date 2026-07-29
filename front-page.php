@@ -1,20 +1,7 @@
 <?php get_header(); ?>
 
 <section class="hero" id="top">
-  <div class="hero__slider">
-    <div class="hero__slide is-active">
-      <img src="<?php echo esc_url(tokai_asset('p_1688184295.jpeg')); ?>" alt="チーム写真">
-    </div>
-    <div class="hero__slide">
-      <img src="<?php echo esc_url(tokai_asset('p_1688184347.jpeg')); ?>" alt="チーム写真">
-    </div>
-    <div class="hero__slide">
-      <img src="<?php echo esc_url(tokai_asset('p_1688184388.jpeg')); ?>" alt="チーム写真">
-    </div>
-    <div class="hero__slide">
-      <img src="<?php echo esc_url(tokai_asset('p_1703486976.jpg')); ?>" alt="チーム写真">
-    </div>
-  </div>
+  <?php tokai_render_hero_slider(); ?>
   <div class="hero__overlay"></div>
   <div class="hero__badge">
     <img src="<?php echo esc_url(tokai_asset('hero-emblem.png')); ?>" alt="TOKAI SAPPORO FOOTBALL CLUB" class="hero__badge-emblem">
@@ -85,6 +72,9 @@
         <span class="section__title-ja">公式アプリ</span>
       </h2>
     </div>
+    <p class="app-home__lead">
+      試合結果・お知らせ・スケジュールを、スマホからいつでも確認できます。
+    </p>
     <div class="app-promo">
       <img src="<?php echo esc_url(tokai_asset('app-promo.png')); ?>" alt="東海大学札幌サッカー部 公式アプリのご案内" class="app-promo__visual" width="1024" height="432" loading="lazy">
       <div class="app-promo__actions">
@@ -94,6 +84,9 @@
         <a href="<?php echo esc_url(get_theme_mod('tokai_google_play_url', '#')); ?>" class="app-promo__badge" target="_blank" rel="noopener" aria-label="Google Playで手に入れよう">
           <img src="<?php echo esc_url(tokai_asset('badge-googleplay.png')); ?>" alt="Google Play で手に入れよう" width="717" height="236" loading="lazy">
         </a>
+      </div>
+      <div class="section__more-wrap">
+        <a href="<?php echo esc_url(tokai_page_url('application')); ?>" class="section__more">More</a>
       </div>
     </div>
   </div>
@@ -109,10 +102,12 @@
     </div>
     <div class="contact__content">
       <p class="contact__text">
-        東海大学付属札幌高等学校サッカー部に関する<br>
-        お問い合わせは、<br>
-        下記フォームよりお気軽にご連絡ください。
+        東海大付属高等学校サッカー部に関する<br>
+        お問い合わせは、お問い合わせページからお願いします。
       </p>
+      <div class="contact__cta">
+        <a href="<?php echo esc_url(tokai_page_url('contact')); ?>" class="btn-primary">お問い合わせはこちら</a>
+      </div>
       <dl class="contact__info">
         <dt>School</dt>
         <dd>東海大学付属札幌高等学校</dd>
@@ -121,15 +116,13 @@
         <dt>Instagram</dt>
         <dd><a href="https://www.instagram.com/tokaisapporo.fc/" target="_blank" rel="noopener">@tokaisapporo.fc</a></dd>
       </dl>
-      <div class="contact__cta">
-        <a href="<?php echo esc_url(tokai_page_url('contact')); ?>" class="btn-primary">お問い合わせはこちら</a>
-      </div>
     </div>
   </div>
 </section>
 
 <section class="section section--black" id="sponsors">
   <div class="section__inner">
+    <?php tokai_render_app_cta(); ?>
     <div class="section__header section__header--center">
       <h2 class="section__title">
         <span class="section__title-en">Sponsor</span>

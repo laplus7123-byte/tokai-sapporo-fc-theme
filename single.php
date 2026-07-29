@@ -44,12 +44,17 @@ $type_class    = $is_match ? 'match' : 'notice';
         <?php the_content(); ?>
       </div>
 
+      <?php echo tokai_render_match_gallery(); ?>
+
       <?php echo tokai_render_members_table(); ?>
 
       <?php tokai_render_sponsor_strip(); ?>
 
       <p class="news-detail__back">
-        <a href="<?php echo esc_url(tokai_page_url('news')); ?>" class="section__more">一覧に戻る</a>
+        <a href="<?php echo esc_url(tokai_page_url('news')); ?>" class="section__more">News一覧</a>
+        <?php if (tokai_get_match_gallery_ids()) : ?>
+          <a href="<?php echo esc_url(tokai_page_url('gallery', ['match' => get_the_ID()])); ?>" class="section__more">Gallery</a>
+        <?php endif; ?>
       </p>
     </article>
   </div>
